@@ -28,7 +28,7 @@ public class Portal extends Activity {
         
         /**Setup listener for click events. */
         RowL.setOnClickListener(new View.OnClickListener() {
-			
+			/**Library List*/
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -38,13 +38,53 @@ public class Portal extends Activity {
        
         
         aButtonU.setOnClickListener(new View.OnClickListener() {
-			
+			/**Button About University of Leeds*/
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				new AlertDialog.Builder(Portal.this)
 				.setTitle(R.string.about_uol)
 				.setMessage(R.string.about_uol_message)
+				.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						
+					}
+				})
+				.show();
+			}
+		});
+        
+        aButtonI.setOnClickListener(new View.OnClickListener() {
+        	/**Button About ISS@Leeds*/
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				new AlertDialog.Builder(Portal.this)
+				.setTitle(R.string.about_iss)
+				.setMessage(R.string.about_iss_message)
+				.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						
+					}
+				})
+				.show();
+			}
+		});
+        
+        aButtonM.setOnClickListener(new View.OnClickListener() {
+        	/**Button About this application*/
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				new AlertDialog.Builder(Portal.this)
+				.setTitle(R.string.about_me)
+				.setMessage(R.string.about_me_message)
 				.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
 					
 					@Override
