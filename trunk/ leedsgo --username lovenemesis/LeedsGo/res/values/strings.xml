@@ -53,5 +53,5 @@
 <string name="about_uol_message">The University of Leeds (informally Leeds University) is a British 'Redbrick' university  located in the city of Leeds, West Yorkshire, England. The University is a member of the Russell Group of research universities (of which the university's Vice-Chancellor Prof Michael Arthur is the current Chairman) and the N8 Group for research collaboration. The university is also a founding member of the Worldwide Universities Network, the Association of Commonwealth Universities, the European University Association, the White Rose University Consortium, the Santander Network and CDIO and is also affiliated to the Association of MBAs, EQUIS and Universities UK. In 1904, a royal charter was granted to the University of Leeds by Edward VII. </string>
 <string name="close">Close</string>
 <string name="about_iss_message">Portal Desktop version is maintained by Information System Service. Telephone: + 44 (0) 113 343 3333 </string>
-<string name="about_me_message">This is an unofficial client for University of Leeds Portal services.\n Author: Tommy He \n Licensed under GPLv3.\n Homepage: http://code.google.com/p/leedsgo/</string>
+<string name="about_me_message">Unofficial client for University of Leeds Portal\n Copyright (C) 2010  Tommy He\n Source: GPLv3\n Contents: CC-NC-SAv3.\n http://code.google.com/p/leedsgo/</string>
 </resources>
