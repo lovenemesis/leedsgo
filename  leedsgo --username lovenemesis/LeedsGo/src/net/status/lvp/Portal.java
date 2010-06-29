@@ -16,18 +16,18 @@ public class Portal extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        /**Initialise list and button. */
-        TextView RowL = (TextView)findViewById(R.id.text_title_library);
-        TextView RowE = (TextView)findViewById(R.id.text_title_email);
-        TextView RowR = (TextView)findViewById(R.id.text_title_rss);
-        TextView RowM = (TextView)findViewById(R.id.text_title_map);
-        Button aButtonU = (Button)findViewById(R.id.button_about_uol);
-        Button aButtonI = (Button)findViewById(R.id.button_about_iss);
-        Button aButtonM = (Button)findViewById(R.id.button_about_me);
+        /**Initialise list and buttons. */
+        TextView rowL = (TextView)findViewById(R.id.text_title_library);
+        TextView rowE = (TextView)findViewById(R.id.text_title_email);
+        TextView rowR = (TextView)findViewById(R.id.text_title_rss);
+        TextView rowM = (TextView)findViewById(R.id.text_title_map);
+        Button buttAU = (Button)findViewById(R.id.button_about_uol);
+        Button buttAI = (Button)findViewById(R.id.button_about_iss);
+        Button buttAM = (Button)findViewById(R.id.button_about_me);
         
         
-        /**Setup listener for click events. */
-        RowL.setOnClickListener(new View.OnClickListener() {
+        /**Setup listeners for click events. */
+        rowL.setOnClickListener(new View.OnClickListener() {
 			/**Library List*/
 			@Override
 			public void onClick(View v) {
@@ -37,7 +37,7 @@ public class Portal extends Activity {
 		});
        
         
-        aButtonU.setOnClickListener(new View.OnClickListener() {
+        buttAU.setOnClickListener(new View.OnClickListener() {
 			/**Button About University of Leeds*/
 			@Override
 			public void onClick(View v) {
@@ -57,7 +57,7 @@ public class Portal extends Activity {
 			}
 		});
         
-        aButtonI.setOnClickListener(new View.OnClickListener() {
+        buttAI.setOnClickListener(new View.OnClickListener() {
         	/**Button About ISS@Leeds*/
 			@Override
 			public void onClick(View v) {
@@ -77,7 +77,7 @@ public class Portal extends Activity {
 			}
 		});
         
-        aButtonM.setOnClickListener(new View.OnClickListener() {
+        buttAM.setOnClickListener(new View.OnClickListener() {
         	/**Button About this application*/
 			@Override
 			public void onClick(View v) {
