@@ -13,8 +13,13 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.content.Intent;
 
 public class LibrarySearch extends Activity {
+	
+	
+	
+	
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,9 +27,8 @@ public class LibrarySearch extends Activity {
         setContentView(R.layout.library_search);
         
         /**Initialise the preference*/
-        final SharedPreferences searching = getSharedPreferences("searching", MODE_PRIVATE);
+    	final SharedPreferences searching = getSharedPreferences("searching", MODE_PRIVATE);
         final SharedPreferences.Editor editor = searching.edit();
-        editor.commit();
         
         /**Initialise all the widgets with values from preference*/
         final EditText editSear = (EditText)findViewById(R.id.edit_search);
@@ -41,7 +45,7 @@ public class LibrarySearch extends Activity {
         
         
         /**Get information from widgets.*/
-        editSear.setText(searching.getString("keywords",""));
+        editSear.setText("");
         editSear.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -61,61 +65,57 @@ public class LibrarySearch extends Activity {
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
 				editor.putString("keyword", editSear.getText().toString());
-				editor.commit();
 			}
 		});
         
         ArrayAdapter<?> adapOnly = ArrayAdapter.createFromResource(this, R.array.only_in, android.R.layout.simple_spinner_item);
         adapOnly.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinOnly.setAdapter(adapOnly);
-        spinOnly.setSelection(searching.getInt("only_in", 3));
+        spinOnly.setSelection(3);
         spinOnly.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("only_in", position);
-				editor.commit();
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// TODO Auto-generated method stub
-				
+				// Only_in must have a value
+				editor.putInt("only_in", 3);
 			}
 		});
         
         ArrayAdapter<?> adapLang = ArrayAdapter.createFromResource(this, R.array.language, android.R.layout.simple_spinner_item);
         adapLang.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinLang.setAdapter(adapLang);
-        spinLang.setSelection(searching.getInt("language", 0));
+        spinLang.setSelection(0);
         spinLang.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("language", position);
-				editor.commit();
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
         
         ArrayAdapter<?> adapMate = ArrayAdapter.createFromResource(this, R.array.material_type, android.R.layout.simple_spinner_item);
         adapMate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinMate.setAdapter(adapMate);
-        spinLang.setSelection(searching.getInt("material", 0));
+        spinLang.setSelection(0);
         spinMate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("material", position);
-				editor.commit();
 			}
 
 			@Override
@@ -128,14 +128,13 @@ public class LibrarySearch extends Activity {
         ArrayAdapter<?> adapLoca = ArrayAdapter.createFromResource(this, R.array.location, android.R.layout.simple_spinner_item);
         adapLoca.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinLoca.setAdapter(adapLoca);
-        spinLang.setSelection(searching.getInt("location", 0));
+        spinLang.setSelection(0);
         spinLoca.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("location", position);
-				editor.commit();
 			}
 
 			@Override
@@ -145,7 +144,7 @@ public class LibrarySearch extends Activity {
 			}
 		});
         
-        editYeAf.setText(searching.getString("year_after",""));
+        editYeAf.setText("");
         editYeAf.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -165,11 +164,10 @@ public class LibrarySearch extends Activity {
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
 				editor.putString("year_after", editYeAf.getText().toString());
-				editor.commit();
 			}
 		});
         
-        editYeBe.setText(searching.getString("year_before",""));
+        editYeBe.setText("");
         editYeBe.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -189,27 +187,25 @@ public class LibrarySearch extends Activity {
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
 				editor.putString("year_before", editYeBe.getText().toString());
-				editor.commit();
 			}
 		});
         
         ArrayAdapter<?> adapSort = ArrayAdapter.createFromResource(this, R.array.sort, android.R.layout.simple_spinner_item);
         adapSort.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinSort.setAdapter(adapSort);
-        spinSort.setSelection(searching.getInt("sort", 0));
+        spinSort.setSelection(0);
         spinSort.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("sort", position);
-				editor.commit();
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// TODO Auto-generated method stub
-				
+				// Sort must have a value
+				editor.putInt("sort", 0);
 			}
 		});
         
@@ -236,7 +232,8 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				
+				editor.commit();
+				startActivity(new Intent(LibrarySearch.this, LibraryList.class));
 			}
 		});
         
@@ -245,7 +242,16 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Clear the preference to restore default value.
-				editor.clear().commit();
+				editor.clear()
+				.remove("keyword")
+				.remove("only_in")
+				.remove("language")
+				.remove("material")
+				.remove("location")
+				.remove("year_after")
+				.remove("year_before")
+				.remove("year_after")
+				.commit();
 			}
 		});
     }
