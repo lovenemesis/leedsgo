@@ -10,25 +10,35 @@ import android.content.DialogInterface;
 import android.content.Intent;
 
 public class Portal extends Activity {
+	
+	private TextView rowL = null;
+	private TextView rowE = null;
+	private TextView rowR = null;
+	private TextView rowM = null;
+	private Button buttAU = null;
+	private Button buttAI = null;
+	private Button buttAM = null; 
+	
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        /**Initialise list and buttons. */
-        TextView rowL = (TextView)findViewById(R.id.text_title_library);
-        TextView rowE = (TextView)findViewById(R.id.text_title_email);
-        TextView rowR = (TextView)findViewById(R.id.text_title_rss);
-        TextView rowM = (TextView)findViewById(R.id.text_title_map);
-        Button buttAU = (Button)findViewById(R.id.button_about_uol);
-        Button buttAI = (Button)findViewById(R.id.button_about_iss);
-        Button buttAM = (Button)findViewById(R.id.button_about_me);
+        //Initialise list and buttons.
+        rowL = (TextView)findViewById(R.id.text_title_library);
+        rowE = (TextView)findViewById(R.id.text_title_email);
+        rowR = (TextView)findViewById(R.id.text_title_rss);
+        rowM = (TextView)findViewById(R.id.text_title_map);
+        buttAU = (Button)findViewById(R.id.button_about_uol);
+        buttAI = (Button)findViewById(R.id.button_about_iss);
+        buttAM = (Button)findViewById(R.id.button_about_me);
         
         
-        /**Setup listeners for click events. */
+        //Setup listeners for click events.
         rowL.setOnClickListener(new View.OnClickListener() {
-			/**Library List*/
+			//Library List
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -38,7 +48,7 @@ public class Portal extends Activity {
        
         
         buttAU.setOnClickListener(new View.OnClickListener() {
-			/**Button About University of Leeds*/
+			//Button About University of Leeds.
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -58,7 +68,7 @@ public class Portal extends Activity {
 		});
         
         buttAI.setOnClickListener(new View.OnClickListener() {
-        	/**Button About ISS@Leeds*/
+        	//Button About ISS@Leeds
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -78,7 +88,7 @@ public class Portal extends Activity {
 		});
         
         buttAM.setOnClickListener(new View.OnClickListener() {
-        	/**Button About this application*/
+        	//Button About this application
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub

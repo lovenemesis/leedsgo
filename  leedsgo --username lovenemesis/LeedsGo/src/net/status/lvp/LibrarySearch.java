@@ -17,6 +17,20 @@ import android.content.Intent;
 
 public class LibrarySearch extends Activity {
 	
+	SharedPreferences searching = null;
+	SharedPreferences.Editor editor = null;
+	
+	private EditText editSear = null;
+	private Spinner spinOnly = null;
+	private Spinner spinLang = null;
+	private Spinner spinMate = null;
+	private Spinner spinLoca = null ; 
+	private EditText editYeAf = null; 
+	private EditText editYeBe = null;
+	private Spinner spinSort = null;
+	private Button buttHeLi = null;
+	private Button buttSear = null;
+	private Button buttClea = null;
 	
 	
 	
@@ -26,25 +40,25 @@ public class LibrarySearch extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.library_search);
         
-        /**Initialise the preference*/
-    	final SharedPreferences searching = getSharedPreferences("searching", MODE_PRIVATE);
-        final SharedPreferences.Editor editor = searching.edit();
+        //Initialise the preference
+    	searching = getSharedPreferences("searching", MODE_PRIVATE);
+        editor = searching.edit();
         
-        /**Initialise all the widgets with values from preference*/
-        final EditText editSear = (EditText)findViewById(R.id.edit_search);
-        final Spinner spinOnly = (Spinner)findViewById(R.id.spinner_only_in);
-        final Spinner spinLang = (Spinner)findViewById(R.id.spinner_language);
-        final Spinner spinMate = (Spinner)findViewById(R.id.spinner_material);
-        final Spinner spinLoca = (Spinner)findViewById(R.id.spinner_location);
-        final EditText editYeAf = (EditText)findViewById(R.id.edit_after);
-        final EditText editYeBe = (EditText)findViewById(R.id.edit_before);
-        final Spinner spinSort = (Spinner)findViewById(R.id.spinner_sort);
-        final Button buttAL = (Button)findViewById(R.id.button_about_lib);
-        final Button buttSear = (Button)findViewById(R.id.button_search);
-        final Button buttClea = (Button)findViewById(R.id.button_search);
+        //Initialise all the widgets with values from preference
+        editSear = (EditText)findViewById(R.id.edit_search);
+        spinOnly = (Spinner)findViewById(R.id.spinner_only_in);
+        spinLang = (Spinner)findViewById(R.id.spinner_language);
+        spinMate = (Spinner)findViewById(R.id.spinner_material);
+        spinLoca = (Spinner)findViewById(R.id.spinner_location);
+        editYeAf = (EditText)findViewById(R.id.edit_after);
+        editYeBe = (EditText)findViewById(R.id.edit_before);
+        spinSort = (Spinner)findViewById(R.id.spinner_sort);
+        buttHeLi = (Button)findViewById(R.id.button_help_lib);
+        buttSear = (Button)findViewById(R.id.button_search);
+        buttClea = (Button)findViewById(R.id.button_clear);
         
         
-        /**Get information from widgets.*/
+        //Get information from inputs.
         editSear.setText("");
         editSear.addTextChangedListener(new TextWatcher() {
 			
@@ -109,7 +123,7 @@ public class LibrarySearch extends Activity {
         ArrayAdapter<?> adapMate = ArrayAdapter.createFromResource(this, R.array.material_type, android.R.layout.simple_spinner_item);
         adapMate.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinMate.setAdapter(adapMate);
-        spinLang.setSelection(0);
+        spinMate.setSelection(0);
         spinMate.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
@@ -128,7 +142,7 @@ public class LibrarySearch extends Activity {
         ArrayAdapter<?> adapLoca = ArrayAdapter.createFromResource(this, R.array.location, android.R.layout.simple_spinner_item);
         adapLoca.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinLoca.setAdapter(adapLoca);
-        spinLang.setSelection(0);
+        spinLoca.setSelection(0);
         spinLoca.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 			@Override
@@ -209,13 +223,13 @@ public class LibrarySearch extends Activity {
 			}
 		});
         
-        buttAL.setOnClickListener(new View.OnClickListener() {
+        buttHeLi.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				new AlertDialog.Builder(LibrarySearch.this)
-				.setTitle(R.string.about_lib)
-				.setMessage(R.string.about_lib_message)
+				.setTitle(R.string.help_lib)
+				.setMessage(R.string.help_lib_message)
 				.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
 					
 					@Override
@@ -250,9 +264,32 @@ public class LibrarySearch extends Activity {
 				.remove("location")
 				.remove("year_after")
 				.remove("year_before")
-				.remove("year_after")
+				.remove("sort")
 				.commit();
 			}
 		});
     }
+    
+    @Override
+    public void onPause(){
+    	// Save the current input area status to preference.
+    	super.onPause();
+    	editor.commit();
+    	
+    }
+    
+    
+    @Override
+    public void onResume(){
+    	super.onResume();
+    	// Restore the input area from last successful search in preference.
+    	editSear.setText(searching.getString("keyword", ""));
+    	spinOnly.setSelection(searching.getInt("only_in", 3));
+    	spinLang.setSelection(searching.getInt("language", 0));
+    	spinMate.setSelection(searching.getInt("material", 0));
+    	spinLoca.setSelection(searching.getInt("location", 0));
+    	editYeAf.setText(searching.getString("year_after", ""));
+    	editYeBe.setText(searching.getString("year_before", ""));
+    	spinSort.setSelection(searching.getInt("sort", 0));
+    } 
 }
