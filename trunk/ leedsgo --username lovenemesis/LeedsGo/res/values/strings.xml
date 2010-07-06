@@ -13,7 +13,7 @@
 <string name="about_iss">ISS@Leeds</string>
 <string name="search">Search</string>
 <string name="clear">Clear</string>
-<string name="about_lib">About Lib</string>
+<string name="help_lib">HOWTO</string>
 <string name="search_for">Search For:</string>
 <string name="language">Language:</string>
 <string name="material_type">Material Type:</string>
@@ -93,5 +93,6 @@
 <item>St. James's</item>
 <item>Special Collections</item>
 </string-array>
-<string name="about_lib_message">UNOFFICIAL client for library catalogue\nEmail: library@leeds.ac.uk\nTelephone: +44 (0) 113 343 5663\nFax: +44 (0) 113 343 5561</string>
+
+<string name="help_lib_message">Type in keywords and click Search.\nClick Clear and return to Portal before doing another search.</string>
 </resources>

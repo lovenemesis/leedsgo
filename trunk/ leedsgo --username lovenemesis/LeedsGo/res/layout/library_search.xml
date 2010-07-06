@@ -182,8 +182,8 @@
 		 android:layout_width="fill_parent">
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_about_lib" 
-		 android:text="@string/about_lib"
+		 android:id="@+id/button_help_lib" 
+		 android:text="@string/help_lib"
 		 android:layout_alignParentLeft="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
