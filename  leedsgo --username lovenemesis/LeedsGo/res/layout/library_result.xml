@@ -32,7 +32,7 @@
 		 android:layout_below="@id/TopBar"
 		 android:layout_above="@+id/BottomBar" >
 		<LinearLayout android:layout_height="wrap_content"
-		 android:id="@+id/LinearLayout02" 
+		 android:id="@+id/LinearLayout" 
 		 android:orientation="vertical"
 		 android:layout_width="fill_parent">
 			<TextView android:text="@string/author"
@@ -112,7 +112,7 @@
 				android:background="#DDD6C6"/>
 		</LinearLayout>
 	</ScrollView>
-	<RelativeLayout android:layout_alignBottom="@id/ScrollView"
+	<RelativeLayout android:layout_alignParentBottom="true"
 		 android:layout_height="wrap_content"
 		 android:id="@+id/BottomBar"
 		 android:background="#DDD6C6"
