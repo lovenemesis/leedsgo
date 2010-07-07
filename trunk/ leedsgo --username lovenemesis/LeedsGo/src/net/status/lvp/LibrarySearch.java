@@ -78,7 +78,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				editor.putString("keyword", editSear.getText().toString());
+				editor.putString("searchstring", editSear.getText().toString());
 			}
 		});
         
@@ -92,12 +92,28 @@ public class LibrarySearch extends Activity {
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("only_in", position);
+				switch(position)
+				{
+				case 0:
+					editor.putString("scope", "1");
+					break;
+				case 1:
+					editor.putString("scope", "2");
+					break;
+				case 2:
+					editor.putString("scope", "3");
+					break;
+				case 3:
+					editor.putString("scope", "4");
+					break;
+				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
 				// Only_in must have a value
 				editor.putInt("only_in", 3);
+				editor.putString("scope", "4");
 			}
 		});
         
@@ -111,12 +127,62 @@ public class LibrarySearch extends Activity {
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("language", position);
+				switch(position)
+				{
+				case 0:
+					editor.putString("lang", "");
+					break;
+				case 1:
+					editor.putString("lang", "eng");
+					break;
+				case 2:
+					editor.putString("lang", "fre");
+					break;
+				case 3:
+					editor.putString("lang", "ger");
+					break;
+				case 4:
+					editor.putString("lang", "ita");
+					break;
+				case 5:
+					editor.putString("lang", "spa");
+					break;
+				case 6:
+					editor.putString("lang", "por");
+					break;
+				case 7:
+					editor.putString("lang", "rus");
+					break;
+				case 8:
+					editor.putString("lang", "ice");
+					break;
+				case 9:
+					editor.putString("lang", "ara");
+					break;
+				case 10:
+					editor.putString("lang", "lat");
+					break;
+				case 11:
+					editor.putString("lang", "grc");
+					break;
+				case 12:
+					editor.putString("lang", "chi");
+					break;
+				case 13:
+					editor.putString("lang", "heb");
+					break;
+				case 14:
+					editor.putString("lang", "jpn");
+					break;
+				case 15:
+					editor.putString("lang", "kor");
+					break;
+				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// TODO Auto-generated method stub
-
+				editor.putString("lang", "");
 			}
 		});
         
@@ -130,12 +196,53 @@ public class LibrarySearch extends Activity {
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("material", position);
+				switch(position)
+				{
+				case 0:
+					editor.putString("mattype", "");
+					break;
+				case 1:
+					editor.putString("mattype", "k");
+					break;
+				case 2:
+					editor.putString("mattype", "c");
+					break;
+				case 3:
+					editor.putString("mattype", "l");
+					break;
+				case 4:
+					editor.putString("mattype", "a");
+					break;
+				case 5:
+					editor.putString("mattype", "h");
+					break;
+				case 6:
+					editor.putString("mattype", "q");
+					break;
+				case 7:
+					editor.putString("mattype", "o");
+					break;
+				case 8:
+					editor.putString("mattype", "g");
+					break;
+				case 9:
+					editor.putString("mattype", "s");
+					break;
+				case 10:
+					editor.putString("mattype", "t");
+					break;
+				case 11:
+					editor.putString("mattype", "v");
+					break;
+				case 12:
+					editor.putString("mattype", "@");
+					break;
+				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// TODO Auto-generated method stub
-				
+				editor.putString("mattype", "");
 			}
 		});
         
@@ -149,12 +256,38 @@ public class LibrarySearch extends Activity {
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
 				editor.putInt("location", position);
+				switch(position)
+				{
+				case 0:
+					editor.putString("branch", "");
+					break;
+				case 1:
+					editor.putString("branch", "net");
+					break;
+				case 2:
+					editor.putString("branch", "bl");
+					break;
+				case 3:
+					editor.putString("branch", "caree");
+					break;
+				case 4:
+					editor.putString("branch", "ebl");
+					break;
+				case 5:
+					editor.putString("branch", "mdl");
+					break;
+				case 6:
+					editor.putString("branch", "mdsjh");
+					break;
+				case 7:
+					editor.putString("branch", "blspc");
+					break;
+				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// TODO Auto-generated method stub
-				
+				editor.putString("branch","");	
 			}
 		});
         
@@ -177,7 +310,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				editor.putString("year_after", editYeAf.getText().toString());
+				editor.putString("Da", editYeAf.getText().toString());
 			}
 		});
         
@@ -200,7 +333,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				editor.putString("year_before", editYeBe.getText().toString());
+				editor.putString("Db", editYeBe.getText().toString());
 			}
 		});
         
@@ -213,13 +346,26 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("sort", position);
+				editor.putInt("sort_by", position);
+				switch(position)
+				{
+				case 0:
+					editor.putString("sort", "D");
+					break;
+				case 1:
+					editor.putString("sort", "A");
+					break;
+				case 2:
+					editor.putString("sort", "R");
+					break;
+				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
 				// Sort must have a value
-				editor.putInt("sort", 0);
+				editor.putInt("sort_by", 0);
+				editor.putString("sort", "D");
 			}
 		});
         
@@ -257,13 +403,18 @@ public class LibrarySearch extends Activity {
 			public void onClick(View v) {
 				// Clear the preference to restore default value.
 				editor.clear()
-				.remove("keyword")
+				.remove("searchstring")
 				.remove("only_in")
+				.remove("scope")
 				.remove("language")
+				.remove("lang")
 				.remove("material")
+				.remove("mattype")
 				.remove("location")
-				.remove("year_after")
-				.remove("year_before")
+				.remove("branch")
+				.remove("Da")
+				.remove("Db")
+				.remove("sort_by")
 				.remove("sort")
 				.commit();
 			}
@@ -283,7 +434,7 @@ public class LibrarySearch extends Activity {
     public void onResume(){
     	super.onResume();
     	// Restore the input area from last successful search in preference.
-    	editSear.setText(searching.getString("keyword", ""));
+    	editSear.setText(searching.getString("searchstring", ""));
     	spinOnly.setSelection(searching.getInt("only_in", 3));
     	spinLang.setSelection(searching.getInt("language", 0));
     	spinMate.setSelection(searching.getInt("material", 0));
