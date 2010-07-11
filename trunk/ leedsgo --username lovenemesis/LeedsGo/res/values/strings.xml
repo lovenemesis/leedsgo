@@ -13,7 +13,7 @@
 <string name="about_iss">ISS@Leeds</string>
 <string name="search">Search</string>
 <string name="clear">Clear</string>
-<string name="help_lib">HOWTO</string>
+<string name="howto">HOWTO</string>
 <string name="search_for">Search For:</string>
 <string name="language">Language:</string>
 <string name="material_type">Material Type:</string>
@@ -95,4 +95,9 @@
 </string-array>
 
 <string name="help_lib_message">Type in keywords and click Search.\nClick Clear and return to Portal before doing another search.</string>
+<string name="guide">See Guide</string>
+<string name="username">Username</string>
+<string name="android_email">Android Email Client</string>
+<string name="k9_email">K9 Mail Client</string>
+<string name="htc_email">HTC Email Client</string>
 </resources>

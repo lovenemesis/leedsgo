@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/Frame"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  <RelativeLayout android:layout_alignParentTop="true"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/TopBar"
+		 android:background="#1F8FFF"
+		 android:layout_width="fill_parent">
+		<TextView android:id="@+id/title_portal"
+		 android:text="@string/title_library"
+		 android:textColor="#EEEEEE"
+		 android:textSize="15sp"
+		 android:padding="2px"
+		 android:layout_alignParentLeft="true"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"/>
+		<TextView android:layout_alignParentRight="true"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/title_uol"
+		 android:text="@string/title_uol"
+		 android:textColor="#EEEEEE"
+		 android:textSize="15sp"
+		 android:padding="2px"
+		 android:layout_width="wrap_content"/>
+  </RelativeLayout>
+  <WebView android:id="@+id/WebView"
+  		 android:layout_below="@id/TopBar"
+		 android:layout_height="wrap_content"
+		 android:layout_width="fill_parent"
+		 android:background="#EBF6FB">
+  </WebView>
+</RelativeLayout>
