@@ -33,7 +33,7 @@
 		 android:layout_width="fill_parent"
 		 android:background="#EBF6FB">
 		<LinearLayout android:layout_height="wrap_content"
-		 android:id="@+id/LinearLayout02" 
+		 android:id="@+id/LinearLayout" 
 		 android:orientation="vertical"
 		 android:layout_width="fill_parent">
 			<TextView android:text="@string/search_for"
@@ -182,8 +182,8 @@
 		 android:layout_width="fill_parent">
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_help_lib" 
-		 android:text="@string/help_lib"
+		 android:id="@+id/button_howto" 
+		 android:text="@string/howto"
 		 android:layout_alignParentLeft="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"

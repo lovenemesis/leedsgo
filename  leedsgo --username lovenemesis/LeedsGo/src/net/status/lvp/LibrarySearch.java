@@ -53,7 +53,7 @@ public class LibrarySearch extends Activity {
         editYeAf = (EditText)findViewById(R.id.edit_after);
         editYeBe = (EditText)findViewById(R.id.edit_before);
         spinSort = (Spinner)findViewById(R.id.spinner_sort);
-        buttHeLi = (Button)findViewById(R.id.button_help_lib);
+        buttHeLi = (Button)findViewById(R.id.button_howto);
         buttSear = (Button)findViewById(R.id.button_search);
         buttClea = (Button)findViewById(R.id.button_clear);
         
@@ -374,7 +374,7 @@ public class LibrarySearch extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				new AlertDialog.Builder(LibrarySearch.this)
-				.setTitle(R.string.help_lib)
+				.setTitle(R.string.howto)
 				.setMessage(R.string.help_lib_message)
 				.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
 					
