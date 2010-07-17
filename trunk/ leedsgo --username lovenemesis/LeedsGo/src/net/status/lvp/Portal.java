@@ -47,7 +47,7 @@ public class Portal extends Activity {
 		});
         
         rowE.setOnClickListener(new View.OnClickListener() {
-			//Library List
+			//Email List
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
