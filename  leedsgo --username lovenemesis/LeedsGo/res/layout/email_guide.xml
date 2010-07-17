@@ -9,8 +9,8 @@
 		 android:id="@+id/TopBar"
 		 android:background="#1F8FFF"
 		 android:layout_width="fill_parent">
-		<TextView android:id="@+id/title_portal"
-		 android:text="@string/title_library"
+		<TextView android:id="@+id/title_email"
+		 android:text="@string/title_email"
 		 android:textColor="#EEEEEE"
 		 android:textSize="15sp"
 		 android:padding="2px"
@@ -28,7 +28,7 @@
   </RelativeLayout>
   <WebView android:id="@+id/WebView"
   		 android:layout_below="@id/TopBar"
-		 android:layout_height="wrap_content"
+		 android:layout_height="fill_parent"
 		 android:layout_width="fill_parent"
 		 android:background="#EBF6FB">
   </WebView>

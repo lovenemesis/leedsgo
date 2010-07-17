@@ -97,7 +97,9 @@
 <string name="help_lib_message">Type in keywords and click Search.\nClick Clear and return to Portal before doing another search.</string>
 <string name="guide">See Guide</string>
 <string name="username">Username</string>
-<string name="android_email">Android Email Client</string>
-<string name="k9_email">K9 Mail Client</string>
-<string name="htc_email">HTC Email Client</string>
+<string name="email_android">Android Email Client</string>
+<string name="email_k9">K9 Mail Client</string>
+<string name="email_htc">HTC Email Client</string>
+<string name="help_email_message">Type ISS username and choose the email client you use</string>
+
 </resources>

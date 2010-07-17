@@ -28,7 +28,7 @@ public class LibrarySearch extends Activity {
 	private EditText editYeAf = null; 
 	private EditText editYeBe = null;
 	private Spinner spinSort = null;
-	private Button buttHeLi = null;
+	private Button buttHowto = null;
 	private Button buttSear = null;
 	private Button buttClea = null;
 	
@@ -53,7 +53,7 @@ public class LibrarySearch extends Activity {
         editYeAf = (EditText)findViewById(R.id.edit_after);
         editYeBe = (EditText)findViewById(R.id.edit_before);
         spinSort = (Spinner)findViewById(R.id.spinner_sort);
-        buttHeLi = (Button)findViewById(R.id.button_howto);
+        buttHowto = (Button)findViewById(R.id.button_howto_library);
         buttSear = (Button)findViewById(R.id.button_search);
         buttClea = (Button)findViewById(R.id.button_clear);
         
@@ -369,7 +369,7 @@ public class LibrarySearch extends Activity {
 			}
 		});
         
-        buttHeLi.setOnClickListener(new View.OnClickListener() {
+        buttHowto.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -430,7 +430,7 @@ public class LibrarySearch extends Activity {
     }
     
     
-    @Override
+    /* @Override
     public void onResume(){
     	super.onResume();
     	// Restore the input area from last successful search in preference.
@@ -442,5 +442,5 @@ public class LibrarySearch extends Activity {
     	editYeAf.setText(searching.getString("year_after", ""));
     	editYeBe.setText(searching.getString("year_before", ""));
     	spinSort.setSelection(searching.getInt("sort", 0));
-    } 
+    } */
 }
