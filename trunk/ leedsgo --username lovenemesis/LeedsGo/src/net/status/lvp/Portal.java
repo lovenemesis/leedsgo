@@ -54,6 +54,15 @@ public class Portal extends Activity {
 				startActivity(new Intent(Portal.this, EmailPre.class));
 			}
 		});
+        
+        rowR.setOnClickListener(new View.OnClickListener() {
+			//Email List
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				startActivity(new Intent(Portal.this, RssGuide.class));
+			}
+		});
        
         
         buttAU.setOnClickListener(new View.OnClickListener() {

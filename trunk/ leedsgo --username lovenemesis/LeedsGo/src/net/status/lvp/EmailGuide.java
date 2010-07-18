@@ -15,6 +15,9 @@ public class EmailGuide extends Activity {
 	private String address;
 	private String client;
 	private String uri = null;
+	private static final String ASSET_EMAIL_ANDROID = "file:///android_asset/email_android.html";
+	private static final String ASSET_EMAIL_K9 = "file:///android_asset/email_k9.html";
+	private static final String ASSET_EMAIL_HTC = "file:///android_asset/email_htc.html";
 	
 	/** Called when the activity is first created. */
     @Override
@@ -27,17 +30,15 @@ public class EmailGuide extends Activity {
         username = receipt.getStringExtra("username");
         imap = username + ".imap.leeds.ac.uk";
         address = username + "@leeds.ac.uk";
-        client = receipt.getStringExtra("client");
-        if (client.equalsIgnoreCase("0"))
-        	uri = "file:///android_asset/email_android.html";
-        if (client.equalsIgnoreCase("1"))
-        	uri = "file:///android_asset/email_k9.html";
-        if (client.equalsIgnoreCase("2"))
-        	uri = "file:///android_asset/email_htc.html";
-        
-        
-        //Initialize the widget
         browser = (WebView)findViewById(R.id.WebView);
-        browser.loadUrl(uri);
+        client = receipt.getStringExtra("client");
+        
+        //Load different local html files according to clients.
+        if (client.equalsIgnoreCase(getString(R.string.email_android)))
+        	browser.loadUrl(ASSET_EMAIL_ANDROID);
+        if (client.equalsIgnoreCase(getString(R.string.email_k9)))
+        	browser.loadUrl(ASSET_EMAIL_K9);
+        if (client.equalsIgnoreCase(getString(R.string.email_htc)))
+        	browser.loadUrl(ASSET_EMAIL_HTC);
     }
 }

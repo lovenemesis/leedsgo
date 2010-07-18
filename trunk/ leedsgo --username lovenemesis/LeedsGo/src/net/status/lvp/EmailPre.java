@@ -24,7 +24,7 @@ public class EmailPre extends Activity {
 	private Button buttHowto = null;
 	private Button buttGuide = null;
 	private String username = null;
-    private String client = "-1";
+    private String client = null;
 
 	
 	/** Called when the activity is first created. */
@@ -71,11 +71,11 @@ public class EmailPre extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// Get the checked radio button id
 				if(rbAnd.isChecked())
-					client = "0";
+					client = getString(R.string.email_android);
 				if(rbK9.isChecked())
-					client = "1";
+					client = getString(R.string.email_k9);
 				if(rbHtc.isChecked())
-					client = "2";		
+					client = getString(R.string.email_htc);		
 			}
 		});
         
@@ -103,8 +103,8 @@ public class EmailPre extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if (username == null || client.equalsIgnoreCase("-1")) {
-					Toast.makeText(EmailPre.this, "Please enter username and choose one client.", Toast.LENGTH_SHORT)
+				if (username.equalsIgnoreCase("") || client == null) {
+					Toast.makeText(EmailPre.this, getString(R.string.toast_email), Toast.LENGTH_SHORT)
 					.show();
 				}
 				else {
