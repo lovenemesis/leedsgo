@@ -102,4 +102,13 @@
 <string name="email_htc">HTC Email Client</string>
 <string name="help_email_message">Type ISS username and choose the email client you use</string>
 
+<string name="rss_prompt">Install free RSS reader</string>
+<string name="news_reader">OI News Reader</string>
+<string name="add_subs">Add Subscription</string>
+<string name="news_uol">University News</string>
+<string name="news_lib">Library News</string>
+<string name="toast_email">Please enter username and choose one client.</string>
+<string name="toast_rss">Please select one RSS feed to subscribe</string>
+<string name="help_rss_message">Click button to install a RSS reader first if you don't have one already.\nSelect one RSS in the list to subscribe</string>
+<string name="toast_add">RSS address has been copied to clipboard. Switch to News Reader to add.</string>
 </resources>

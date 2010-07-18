@@ -17,6 +17,7 @@
 	<activity android:name="LibraryResult"></activity>
 	<activity android:name="EmailPre"></activity>
 	<activity android:name="EmailGuide"></activity>
+	<activity android:name="RssGuide"></activity>
 </application>
     <uses-sdk android:minSdkVersion="4" />
 </manifest> 
