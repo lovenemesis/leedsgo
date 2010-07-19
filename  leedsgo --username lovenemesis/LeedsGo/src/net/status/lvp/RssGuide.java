@@ -24,6 +24,7 @@ public class RssGuide extends Activity {
     private String subs = null;
     private static final String RSS_UOL = "http://www.leeds.ac.uk/rss/news";
     private static final String RSS_LIB = "http://library.leeds.ac.uk/rss";
+    private static final String FEED_READER = "market://details?id=org.openintents.news";
     
 
 	
@@ -46,7 +47,7 @@ public class RssGuide extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=org.openintents.news")));
+				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FEED_READER)));
 			}
 		});
         

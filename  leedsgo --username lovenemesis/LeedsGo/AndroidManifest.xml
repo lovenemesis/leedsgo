@@ -18,6 +18,7 @@
 	<activity android:name="EmailPre"></activity>
 	<activity android:name="EmailGuide"></activity>
 	<activity android:name="RssGuide"></activity>
+<activity android:name="MapGuide"></activity>
 </application>
     <uses-sdk android:minSdkVersion="4" />
 </manifest> 
