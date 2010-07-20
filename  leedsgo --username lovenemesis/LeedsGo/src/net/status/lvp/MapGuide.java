@@ -27,7 +27,7 @@ public class MapGuide extends Activity {
     private static final String MAP_VIEWER = "market://details?id=com.google.android.apps.maps";
     private static final String PDF_VIEWER = "market://details?id=com.adobe.reader";
     private static final String FLASH_VIEWER = "market://details?id=com.adobe.flashplayer";
-    private static final String GEO_UOL = "geo:53.807988,-1.55448?z=15";
+    private static final String GEO_UOL = "geo:53.807988,-1.55448?z=16";
     private static final String PDF_MAP = "http://www.leeds.ac.uk/downloads/014257_campus_map_A3_fold.pdf";
     private static final String FLASH_MAP = "http://www.leeds.ac.uk/site/custom_scripts/campus_map/";
     
