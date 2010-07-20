@@ -1,5 +1,11 @@
 <HTML>
 <HEAD>
+<script language="javascript">
+function changeText(usr){
+	document.getElementById('address').innerHTML = usr+"@leeds.ac.uk";
+	document.getElementById('imap').innerHTML = usr+".imap.leeds.ac.uk";
+}
+</script>
 </HEAD>
 <BODY>
 <P><B>YOU CAN SWITCH BETWEEN CLIENT AND THIS GUIDE BY LONG PRESSING HOME BUTTON</B></P>
@@ -14,9 +20,9 @@
 <P>In the wizard:</P>
 <OL>
 	<LI><P>First you will see the welcome message from K-9 team. Click <B>Next</B> to continue.</P></LI>
-	<LI><P>Fill blanks with address <I><B>EMAIL</B></I>	and password. Click <B>Next</B> to continue.</P></LI>
+	<LI><P>Fill blanks with address <I><B id="address">EMAIL</B></I> and password. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Select <B>IMAP</B> to proceed.</P></LI>
-	<LI><P>Change <B>IMAP server</B> to <I><B>IMAP</B></I>.	<B>Security type</B> should be <B>None</B> whereas <B>Authentication Type</B> is <B>PLAIN</B>. Make sure <B>Port</B> is <B>143</B>. Click <B>Next</B> to continue.</P></LI>
+	<LI><P>Change <B>IMAP server</B> to <I><B id="imap">IMAP</B></I>.	<B>Security type</B> should be <B>None</B> whereas <B>Authentication Type</B> is <B>PLAIN</B>. Make sure <B>Port</B> is <B>143</B>. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Modify <B>SMTP server</B> to <B>smtps.leeds.ac.uk</B> . Make sure <B>Security type</B> is <B>SSL(always)</B> and <B>Port</B> is <B>465</B>. Leave the rest to default and click <B>Next</B>.</P></LI>
 	<LI><P>Configure <B>checking frequency</B> and <B>number of message to display</B> according to your need. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Name this account and yourself as you want. Click <B>Done</B> to finish.</P></LI>

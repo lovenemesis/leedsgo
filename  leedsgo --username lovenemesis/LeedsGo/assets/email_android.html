@@ -1,5 +1,11 @@
 <HTML>
 <HEAD>
+<script language="javascript">
+function changeText(usr){
+	document.getElementById('address').innerHTML = usr+"@leeds.ac.uk";
+	document.getElementById('imap').innerHTML = usr+".imap.leeds.ac.uk";
+}
+</script>
 </HEAD>
 <BODY>
 <P><B>YOU CAN SWITCH BETWEEN CLIENT AND THIS GUIDE BY LONG PRESSING HOME BUTTON</B></P>
@@ -12,9 +18,9 @@
 </OL>
 <P>In "Set up email" wizard:</P>
 <OL>
-	<LI><P>Fill blanks with address <I><B>EMAIL</B></I>	and password. Click <B>Next</B> to continue.</P></LI>
+	<LI><P>Fill blanks with address <I><B id="address">EMAIL</B></I> and password. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Select <B>IMAP</B> to proceed.</P></LI>
-	<LI><P>Change <B>IMAP server</B> to <I><B>IMAP</B></I>.	Make sure <B>Port</B> is <B>143</B> and <B>Security type</B> is <B>None</B>. Click <B>Next</B> to continue.</P></LI>
+	<LI><P>Change <B>IMAP server</B> to <I><B id="imap">IMAP</B></I>. Make sure <B>Port</B> is <B>143</B> and <B>Security type</B> is <B>None</B>. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Modify <B>SMTP server</B> to <B>smtps.leeds.ac.uk</B> . Make sure <B>Port</B> is	<B>465</B> and <B>Security type</B> is <B>SSL</B>. Click
 	<B>Next</B> to continue.</P></LI>
 	<LI><P>Configure <B>checking frequency</B> and other options as you want. Click <B>Next</B> to continue.</P></LI>
@@ -22,5 +28,6 @@
 </OL>
 <P>NOW your mobile email client is configured with Leeds University email.</P>
 <P><I>Thank you for using this guide.</I></P>
+<input type='button' onclick='changeText("sc09zyh")' value='Change Text'/>
 </BODY>
 </HTML>
