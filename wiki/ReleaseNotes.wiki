@@ -1,6 +1,4 @@
 #labels Featured
-#Contains the release notes of all releases
-
 = Introduction =
 
 This file contains all the release notes.
