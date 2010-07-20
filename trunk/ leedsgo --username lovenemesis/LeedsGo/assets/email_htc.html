@@ -1,5 +1,12 @@
 <HTML>
 <HEAD>
+<script language="javascript">
+function changeText(usr){
+	document.getElementById('address').innerHTML = usr+"@leeds.ac.uk";
+	document.getElementById('username').innerHTML = usr;
+	document.getElementById('imap').innerHTML = usr+".imap.leeds.ac.uk";
+}
+</script>
 </HEAD>
 <BODY>
 <P><B>YOU CAN SWITCH BETWEEN CLIENT AND THIS GUIDE BY LONG PRESSING HOME BUTTON</B></P>
@@ -13,7 +20,7 @@
 <OL>
 	<LI><P>Choose <B>Other(POP3/IMAP)</B> from the list.</P></LI>
 	<LI><P>Choose <B>Manual Setup</B> because the auto setup does not work with university email.</P></LI>
-	<LI><P>Select <B>IMAP</B> under <B>Protocol</B> dropdown list. Fill form with address <I><B>EMAIL</B></I> username <I><B>USERNAME</B></I> and password. Enter <I><B>IMAP</B></I> in <B>IMAP server</B> and select <B>None</B> under <B>Security type</B>. Make sure <B>Port</B> is <B>143</B>. Click <B>Next</B> to continue.</P></LI>
+	<LI><P>Select <B>IMAP</B> under <B>Protocol</B> dropdown list. Fill form with address <I><B id="address">EMAIL</B></I> , username <I><B id="username">USERNAME</B></I> and password. Enter <I><B id="imap">IMAP</B></I> in <B>IMAP server</B> and select <B>None</B> under <B>Security type</B>. Make sure <B>Port</B> is <B>143</B>. Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Change  to <B>SMTP server</B> to <B>smtps.leeds.ac.uk</B>. <B>Security type</B> should be <B>SSL</B> and the <B>Server port</B> would be <B>465</B>.  Click <B>Next</B> to continue.</P></LI>
 	<LI><P>Modify <B>Account Name</B> and <B>Your Name</B> as you want. Then click <B>Finish setup</B>.</P></LI>
 </OL>

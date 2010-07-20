@@ -103,7 +103,7 @@ public class EmailPre extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if (username.equalsIgnoreCase("") || client == null) {
+				if (username == null || client == null) {
 					Toast.makeText(EmailPre.this, getString(R.string.toast_email), Toast.LENGTH_SHORT)
 					.show();
 				}
