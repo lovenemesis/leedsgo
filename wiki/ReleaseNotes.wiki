@@ -1,0 +1,15 @@
+#labels Featured
+#Contains the release notes of all releases
+
+= Introduction =
+
+This file contains all the release notes.
+
+
+== 1.0 Alpha 20/07/2010==
+
+Notes in 1.0 Alpha:
+  * All most everything works, *except Library* (No response from library system administrators).
+  * No optimized.
+  * Need to tick "Unknown sources" in Application Setting to install.
+  * Tested on QVGA Android 1.6/2.1.
