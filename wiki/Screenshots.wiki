@@ -1,0 +1,18 @@
+= Screenshots =
+
+Here are some screenshots you probably would like to see.
+
+
+=== Details ===
+
+http://leedsgo.googlecode.com/files/MainPortal.png
+
+http://leedsgo.googlecode.com/files/LibrarySearch.png
+
+http://leedsgo.googlecode.com/files/EmailPre.png
+
+http://leedsgo.googlecode.com/files/EmailGuide.png
+
+http://leedsgo.googlecode.com/files/RSSGuide.png
+
+http://leedsgo.googlecode.com/files/MapGuide.png
