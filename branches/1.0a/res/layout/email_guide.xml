@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/Frame"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  <RelativeLayout android:layout_alignParentTop="true"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/TopBar"
+		 android:background="#1F8FFF"
+		 android:layout_width="fill_parent">
+		<TextView android:id="@+id/title_email"
+		 android:text="@string/title_email"
+		 android:textColor="#EEEEEE"
+		 android:textSize="15sp"
+		 android:padding="2px"
+		 android:layout_alignParentLeft="true"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"/>
+		<TextView android:layout_alignParentRight="true"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/title_uol"
+		 android:text="@string/title_uol"
+		 android:textColor="#EEEEEE"
+		 android:textSize="15sp"
+		 android:padding="2px"
+		 android:layout_width="wrap_content"/>
+  </RelativeLayout>
+  <WebView android:id="@+id/WebView"
+  		 android:layout_below="@id/TopBar"
+  		 android:layout_above="@+id/BottomBar"
+		 android:layout_height="fill_parent"
+		 android:layout_width="fill_parent"
+		 android:background="#EBF6FB">
+  </WebView>
+  <RelativeLayout
+		 android:layout_alignParentBottom="true"
+		 android:layout_height="wrap_content"
+		 android:id="@+id/BottomBar"
+		 android:background="#DDD6C6"
+		 android:layout_width="fill_parent">
+		<Button android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:id="@+id/button_copy_email" 
+		 android:text="@string/email"
+		 android:layout_alignParentLeft="true"/>
+		<Button android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:id="@+id/button_personalize" 
+		 android:text="@string/personalize"
+		 android:textStyle="bold"
+		 android:layout_centerInParent="true"/>
+		<Button android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:id="@+id/button_copy_imap" 
+		 android:text="@string/imap"
+		 android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+</RelativeLayout>

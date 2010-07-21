@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<string name="app_name">LeedsGo</string>
+<string name="title_library">Uni Library</string>
+<string name="title_email">Email Helper</string>
+<string name="title_rss">RSS News Feed</string>
+<string name="title_portal">Portal</string>
+<string name="title_uol">University of Leeds</string>
+<string name="title_map">Campus Map</string>
+<string name="about_me">About Me</string>
+<string name="about_uol">About Uni</string>
+<string name="about_iss">ISS@Leeds</string>
+<string name="search">Search</string>
+<string name="clear">Clear</string>
+<string name="howto">HOWTO</string>
+<string name="search_for">Search For:</string>
+<string name="language">Language:</string>
+<string name="material_type">Material Type:</string>
+<string name="location">Location:</string>
+<string name="only_in">Only in:</string>
+<string name="year_after">Year After:</string>
+<string name="year_before">and Before:</string>
+<string name="sort">Sort:</string>
+
+<string-array name="language">
+<item>ANY</item>
+<item>English</item>
+<item>French</item>
+<item>German</item>
+<item>Italian</item>
+<item>Spanish</item>
+<item>Portuguese</item>
+<item>Russian</item>
+<item>Icelandic</item>
+<item>Arabic</item>
+<item>Latin</item>
+<item>Ancient Greek</item>
+<item>Chinese</item>
+<item>Hebrew</item>
+<item>Japanese</item>
+<item>Korean</item>
+</string-array>
+
+<string name="prev">Prev</string>
+<string name="next">Next</string>
+<string name="home">Home</string>
+<string name="list">List</string>
+<string name="author">Author:</string>
+<string name="title">Title:</string>
+<string name="imprint">Imprint:</string>
+<string name="availability">Availability:</string>
+<string name="note">Note:</string>
+<string name="about_uol_message">The University of Leeds (informally Leeds University) is a British 'Redbrick' university located in the city of Leeds, West Yorkshire, England.\nThe University is a member of the Russell Group of research universities and the N8 Group for research collaboration.\nThe university is also a founding member of the Worldwide Universities Network, the Association of Commonwealth Universities, the European University Association, the White Rose University Consortium, the Santander Network and CDIO and is also affiliated to the Association of MBAs, EQUIS and Universities UK.\nIn 1904, a royal charter was granted to the University of Leeds by Edward VII.</string>
+<string name="close">Close</string>
+<string name="about_iss_message">Portal Desktop version is maintained by Information System Service.\nTelephone: + 44 (0) 113 343 3333 </string>
+<string name="about_me_message">Unofficial client for University of Leeds Portal.\nCopyright (C) 2010  Tommy He\nSource: GPLv3\nContents: CC-NC-SAv3.\nhttp://code.google.com/p/leedsgo/</string>
+
+<string-array name="only_in">
+<item>Special Collections</item>
+<item>Journals/Periodicals</item>
+<item>Electronic Resources</item>
+<item>Full Catalogue</item>
+</string-array>
+
+<string-array name="material_type">
+<item>ANY</item>
+<item>ART WORK/PHOTO</item>
+<item>E-RESOURCE</item>
+<item>MANUSCRIPT</item>
+<item>MAP</item>
+<item>MICROFORM</item>
+<item>MUSIC SCORE</item>
+<item>KIT</item>
+<item>SLIDE</item>
+<item>SOUND RECORD'G</item>
+<item>TEXT</item>
+<item>VIDEO/DVD</item>
+<item>UNUSED</item>
+
+</string-array>
+<string-array name="sort"><item>Date</item>
+<item>Title</item>
+<item>Relevance</item>
+</string-array>
+
+<string-array name="location"><item>ANY</item>
+<item>Available online</item>
+<item>Brotherton Library</item>
+<item>Careers Centre</item>
+<item>Edward Boyle Library</item>
+<item>Health Sciences Library</item>
+<item>St. James's</item>
+<item>Special Collections</item>
+</string-array>
+
+<string name="help_lib_message">Type in keywords and click Search.\nClick Clear and return to Portal before doing another search.</string>
+<string name="guide">See Guide</string>
+<string name="username">Username</string>
+<string name="email_android">Android Email Client</string>
+<string name="email_k9">K9 Mail Client</string>
+<string name="email_htc">HTC Email Client</string>
+<string name="help_email_message">Type ISS username and choose the email client you use</string>
+
+<string name="rss_prompt">Install RSS Reader</string>
+<string name="news_reader">OI News Reader</string>
+<string name="add_subs">Add Subscription</string>
+<string name="news_uol">University News</string>
+<string name="news_lib">Library News</string>
+<string name="toast_email_pre">Please enter username and choose one client.</string>
+<string name="toast_rss">Please select one RSS feed to subscribe</string>
+<string name="help_rss_message">Click button to install a RSS reader first if you don't have one already.\nSelect one RSS in the list to subscribe</string>
+<string name="toast_add">RSS address has been copied to clipboard. Switch to News Reader to add.</string>
+<string name="map_prompt">Install viewers</string>
+<string name="map_viewer">Google Maps</string>
+<string name="pdf_viewer">Adobe Reader (Android 2.1+)</string>
+<string name="flash_viewer">Adobe Flash Player (Android 2.2+)</string><string name="map_online">Online Map (Require Google Maps or other)</string>
+<string name="map_pdf">PDF Map (Require PDF reader)</string>
+<string name="map_flash">Interactive Map (Require Flash, UNTESTED)</string>
+<string name="view_map">View Map</string>
+<string name="help_map_message">Install the necessary viewer before proceed to view the campus maps</string>
+<string name="toast_map">Please select a kind of map to view.</string>
+
+<string name="personalize">Personalize</string>
+<string name="imap">IMAP</string>
+<string name="email">Email</string>
+<string name="toast_email_guide">Click Personalize to see your personal guide. :-)</string>
+<string name="toast_email_per">The guide has been personalized for you.</string>
+<string name="toast_email_email">Your personal email address has been copied to clipboard:\n</string>
+<string name="toast_email_imap">Your personal IMAP address has been copied to clipboard:\n</string>
+<string name="map_select">Select map to view:</string>
+<string name="rss_select">Select RSS to subscribe:</string>
+</resources>
