@@ -4,15 +4,30 @@ Here are some screenshots you probably would like to see.
 
 
 === Details ===
+----
+http://leedsgo.googlecode.com/files/MainPortal.png  
 
-http://leedsgo.googlecode.com/files/MainPortal.png
+*Entrance of the application.*
+----
+http://leedsgo.googlecode.com/files/LibrarySearch.png ---- 
 
-http://leedsgo.googlecode.com/files/LibrarySearch.png
+*Library Search with advanced search options.*
+----
+http://leedsgo.googlecode.com/files/EmailPre.png 
 
-http://leedsgo.googlecode.com/files/EmailPre.png
+*Provides 3 guides to different email clients.*
+----
+http://leedsgo.googlecode.com/files/EmailGuide.png 
 
-http://leedsgo.googlecode.com/files/EmailGuide.png
+*Step by step guide with personalized function. Save Email and IMAP address to clipboard for later use.*
+----
+http://leedsgo.googlecode.com/files/RSSGuide.png 
 
-http://leedsgo.googlecode.com/files/RSSGuide.png
+*Free RSS reader. Select and save Feed address to clipboard for later use.*
+----
+http://leedsgo.googlecode.com/files/MapGuide.png 
 
-http://leedsgo.googlecode.com/files/MapGuide.png
+Three kinds of map for different needs and devices.
+----
+
+_Created on VGA screen. Tested on QVGA size devices._
