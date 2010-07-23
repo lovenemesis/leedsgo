@@ -3,8 +3,8 @@ package net.status.lvp;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -13,12 +13,12 @@ import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.Toast;
 import android.content.Intent;
 
 public class LibrarySearch extends Activity {
 	
-	SharedPreferences searching = null;
-	SharedPreferences.Editor editor = null;
+	private Handler handler = new Handler();
 	
 	private EditText editSear = null;
 	private Spinner spinOnly = null;
@@ -32,6 +32,16 @@ public class LibrarySearch extends Activity {
 	private Button buttSear = null;
 	private Button buttClea = null;
 	
+	private String searchstring = null;
+	private String scope = "4";
+	private String lang = "";
+	private String mattype = "";
+	private String branch = "";
+	private String Da = "";
+	private String Db = "";
+	private String sort = "D";
+	
+	
 	
 	
 	/** Called when the activity is first created. */
@@ -39,10 +49,6 @@ public class LibrarySearch extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.library_search);
-        
-        //Initialise the preference
-    	searching = getSharedPreferences("searching", MODE_PRIVATE);
-        editor = searching.edit();
         
         //Initialise all the widgets with values from preference
         editSear = (EditText)findViewById(R.id.edit_search);
@@ -77,8 +83,8 @@ public class LibrarySearch extends Activity {
 			
 			@Override
 			public void afterTextChanged(Editable s) {
-				// Push text to preference
-				editor.putString("searchstring", editSear.getText().toString());
+				// Put result to variable
+				searchstring = editSear.getText().toString();
 			}
 		});
         
@@ -91,29 +97,28 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("only_in", position);
 				switch(position)
 				{
 				case 0:
-					editor.putString("scope", "1");
+					scope = "1";
 					break;
 				case 1:
-					editor.putString("scope", "2");
+					scope = "2";
 					break;
 				case 2:
-					editor.putString("scope", "3");
+					scope = "3";
 					break;
 				case 3:
-					editor.putString("scope", "4");
+					scope = "4";
 					break;
 				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				// Only_in must have a value
-				editor.putInt("only_in", 3);
-				editor.putString("scope", "4");
+				// Revert to default
+				spinOnly.setSelection(3);
+				scope = "4";
 			}
 		});
         
@@ -126,63 +131,64 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("language", position);
 				switch(position)
 				{
 				case 0:
-					editor.putString("lang", "");
+					lang = "";
 					break;
 				case 1:
-					editor.putString("lang", "eng");
+					lang = "eng";
 					break;
 				case 2:
-					editor.putString("lang", "fre");
+					lang = "fre";
 					break;
 				case 3:
-					editor.putString("lang", "ger");
+					lang = "ger";
 					break;
 				case 4:
-					editor.putString("lang", "ita");
+					lang = "ita";
 					break;
 				case 5:
-					editor.putString("lang", "spa");
+					lang = "spa";
 					break;
 				case 6:
-					editor.putString("lang", "por");
+					lang = "por";
 					break;
 				case 7:
-					editor.putString("lang", "rus");
+					lang = "rus";
 					break;
 				case 8:
-					editor.putString("lang", "ice");
+					lang = "ice";
 					break;
 				case 9:
-					editor.putString("lang", "ara");
+					lang = "ara";
 					break;
 				case 10:
-					editor.putString("lang", "lat");
+					lang = "lat";
 					break;
 				case 11:
-					editor.putString("lang", "grc");
+					lang = "grc";
 					break;
 				case 12:
-					editor.putString("lang", "chi");
+					lang = "chi";
 					break;
 				case 13:
-					editor.putString("lang", "heb");
+					lang = "heb";
 					break;
 				case 14:
-					editor.putString("lang", "jpn");
+					lang = "jpn";
 					break;
 				case 15:
-					editor.putString("lang", "kor");
+					lang = "kor";
 					break;
 				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				editor.putString("lang", "");
+				// Revert to default
+				spinLang.setSelection(0);
+				lang = "";
 			}
 		});
         
@@ -195,54 +201,55 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("material", position);
 				switch(position)
 				{
 				case 0:
-					editor.putString("mattype", "");
+					mattype = "";
 					break;
 				case 1:
-					editor.putString("mattype", "k");
+					mattype = "k";
 					break;
 				case 2:
-					editor.putString("mattype", "c");
+					mattype = "c";
 					break;
 				case 3:
-					editor.putString("mattype", "l");
+					mattype = "l";
 					break;
 				case 4:
-					editor.putString("mattype", "a");
+					mattype = "a";
 					break;
 				case 5:
-					editor.putString("mattype", "h");
+					mattype = "h";
 					break;
 				case 6:
-					editor.putString("mattype", "q");
+					mattype = "q";
 					break;
 				case 7:
-					editor.putString("mattype", "o");
+					mattype = "o";
 					break;
 				case 8:
-					editor.putString("mattype", "g");
+					mattype = "g";
 					break;
 				case 9:
-					editor.putString("mattype", "s");
+					mattype = "s";
 					break;
 				case 10:
-					editor.putString("mattype", "t");
+					mattype = "t";
 					break;
 				case 11:
-					editor.putString("mattype", "v");
+					mattype = "v";
 					break;
 				case 12:
-					editor.putString("mattype", "@");
+					mattype = "@";
 					break;
 				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				editor.putString("mattype", "");
+				// Revert to default
+				spinMate.setSelection(0);
+				mattype = "";
 			}
 		});
         
@@ -255,39 +262,40 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("location", position);
 				switch(position)
 				{
 				case 0:
-					editor.putString("branch", "");
+					branch = "";
 					break;
 				case 1:
-					editor.putString("branch", "net");
+					branch = "net";
 					break;
 				case 2:
-					editor.putString("branch", "bl");
+					branch = "bl";
 					break;
 				case 3:
-					editor.putString("branch", "caree");
+					branch = "caree";
 					break;
 				case 4:
-					editor.putString("branch", "ebl");
+					branch = "ebl";
 					break;
 				case 5:
-					editor.putString("branch", "mdl");
+					branch = "mdl";
 					break;
 				case 6:
-					editor.putString("branch", "mdsjh");
+					branch = "mdsjh";
 					break;
 				case 7:
-					editor.putString("branch", "blspc");
+					branch = "blspc";
 					break;
 				}
 			}
 
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
-				editor.putString("branch","");	
+				//Revert to default
+				spinLoca.setSelection(0);
+				branch = "";
 			}
 		});
         
@@ -310,7 +318,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				editor.putString("Da", editYeAf.getText().toString());
+				Da = editYeAf.getText().toString();
 			}
 		});
         
@@ -333,7 +341,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				editor.putString("Db", editYeBe.getText().toString());
+				Db = editYeBe.getText().toString();
 			}
 		});
         
@@ -346,17 +354,16 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 				// Push position to preference
-				editor.putInt("sort_by", position);
 				switch(position)
 				{
 				case 0:
-					editor.putString("sort", "D");
+					sort = "D";
 					break;
 				case 1:
-					editor.putString("sort", "A");
+					sort = "A";
 					break;
 				case 2:
-					editor.putString("sort", "R");
+					sort = "R";
 					break;
 				}
 			}
@@ -364,8 +371,8 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onNothingSelected(AdapterView<?>  parent) {
 				// Sort must have a value
-				editor.putInt("sort_by", 0);
-				editor.putString("sort", "D");
+				spinSort.setSelection(0);
+				sort = "D";
 			}
 		});
         
@@ -391,9 +398,23 @@ public class LibrarySearch extends Activity {
         buttSear.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				editor.commit();
-				startActivity(new Intent(LibrarySearch.this, LibraryList.class));
+				// Verify and start the searching activity
+				if (searchstring == null || searchstring.length() == 0) {
+					Toast.makeText(LibrarySearch.this, getString(R.string.toast_lib_search), Toast.LENGTH_SHORT)
+					.show();
+				}
+				else {
+					startActivity(new Intent(LibrarySearch.this, LibraryList.class)
+						.putExtra("searchstring", searchstring)
+						.putExtra("scope", scope)
+						.putExtra("lang", lang)
+						.putExtra("mattype", mattype)
+						.putExtra("branch", branch)
+						.putExtra("Da", Da)
+						.putExtra("Db", Db)
+						.putExtra("sort", sort)
+					);
+				}
 			}
 		});
         
@@ -402,45 +423,38 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void onClick(View v) {
 				// Clear the preference to restore default value.
-				editor.clear()
-				.remove("searchstring")
-				.remove("only_in")
-				.remove("scope")
-				.remove("language")
-				.remove("lang")
-				.remove("material")
-				.remove("mattype")
-				.remove("location")
-				.remove("branch")
-				.remove("Da")
-				.remove("Db")
-				.remove("sort_by")
-				.remove("sort")
-				.commit();
+				handler.post(new Runnable() {
+					
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						/**searchstring = null;
+						scope = "4";
+						lang = "";
+						mattype = "";
+						branch = "";
+						Da = "";
+						Db = "";
+						sort = "D";*/
+						editSear.setText("");
+						spinOnly.setSelection(3);
+						spinLang.setSelection(0);
+						spinMate.setSelection(0);
+						spinLoca.setSelection(0);
+						editYeAf.setText("");
+						editYeBe.setText("");
+						spinSort.setSelection(0);
+					}
+				});
 			}
 		});
     }
     
     @Override
     public void onPause(){
-    	// Save the current input area status to preference.
+    	// TODO 
     	super.onPause();
-    	editor.commit();
-    	
+    		
     }
     
-    
-    /* @Override
-    public void onResume(){
-    	super.onResume();
-    	// Restore the input area from last successful search in preference.
-    	editSear.setText(searching.getString("searchstring", ""));
-    	spinOnly.setSelection(searching.getInt("only_in", 3));
-    	spinLang.setSelection(searching.getInt("language", 0));
-    	spinMate.setSelection(searching.getInt("material", 0));
-    	spinLoca.setSelection(searching.getInt("location", 0));
-    	editYeAf.setText(searching.getString("year_after", ""));
-    	editYeBe.setText(searching.getString("year_before", ""));
-    	spinSort.setSelection(searching.getInt("sort", 0));
-    } */
 }
