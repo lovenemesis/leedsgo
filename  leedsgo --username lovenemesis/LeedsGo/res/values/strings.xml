@@ -130,4 +130,5 @@
 <string name="toast_email_imap">Your personal IMAP address has been copied to clipboard:\n</string>
 <string name="map_select">Select map to view:</string>
 <string name="rss_select">Select RSS to subscribe:</string>
+<string name="toast_lib_search">Please enter keywords for searching.</string>
 </resources>
