@@ -94,7 +94,7 @@
 <item>Special Collections</item>
 </string-array>
 
-<string name="help_lib_message">Type in keywords and click Search.\nClick Clear and return to Portal before doing another search.</string>
+<string name="help_lib_message">Type in keywords and click Search.\nClick Clear to revert default values.</string>
 <string name="guide">See Guide</string>
 <string name="username">Username</string>
 <string name="email_android">Android Email Client</string>
@@ -121,14 +121,22 @@
 <string name="help_map_message">Install the necessary viewer before proceed to view the campus maps</string>
 <string name="toast_map">Please select a kind of map to view.</string>
 
-<string name="personalize">Personalize</string>
+
 <string name="imap">IMAP</string>
 <string name="email">Email</string>
 <string name="toast_email_guide">Click Personalize to see your personal guide. :-)</string>
-<string name="toast_email_per">The guide has been personalized for you.</string>
+<string name="toast_email_user">Your personal username has been copied to clipboard:\n</string>
 <string name="toast_email_email">Your personal email address has been copied to clipboard:\n</string>
 <string name="toast_email_imap">Your personal IMAP address has been copied to clipboard:\n</string>
 <string name="map_select">Select map to view:</string>
 <string name="rss_select">Select RSS to subscribe:</string>
 <string name="toast_lib_search">Please enter keywords for searching.</string>
+<string name="lib_select">Select the view for Catalogue:</string>
+<string name="lib_native">Native Android View\n(Constructing)</string>
+<string name="lib_web">Legacy AirPAC View</string>
+<string name="view_lib">View catalogue</string>
+<string name="toast_lib_pre">Select a way to access catalogue.</string>
+<string name="return_view">Return view</string>
+<string name="forward">Forward</string>
+<string name="toast_email_per">Click Username to copy and personalize the guide.</string>
 </resources>

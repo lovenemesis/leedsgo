@@ -84,7 +84,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Put result to variable
-				searchstring = editSear.getText().toString();
+				searchstring = editSear.getText().toString().trim();
 			}
 		});
         
@@ -318,7 +318,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				Da = editYeAf.getText().toString();
+				Da = editYeAf.getText().toString().trim();
 			}
 		});
         
@@ -341,7 +341,7 @@ public class LibrarySearch extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Push text to preference
-				Db = editYeBe.getText().toString();
+				Db = editYeBe.getText().toString().trim();
 			}
 		});
         
@@ -427,15 +427,6 @@ public class LibrarySearch extends Activity {
 					
 					@Override
 					public void run() {
-						// TODO Auto-generated method stub
-						/**searchstring = null;
-						scope = "4";
-						lang = "";
-						mattype = "";
-						branch = "";
-						Da = "";
-						Db = "";
-						sort = "D";*/
 						editSear.setText("");
 						spinOnly.setSelection(3);
 						spinLang.setSelection(0);

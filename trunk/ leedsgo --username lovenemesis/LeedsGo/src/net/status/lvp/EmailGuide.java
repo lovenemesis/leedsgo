@@ -2,6 +2,7 @@ package net.status.lvp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.ClipboardManager;
 import android.view.View;
 import android.webkit.WebView;
@@ -16,9 +17,10 @@ public class EmailGuide extends Activity {
 	private WebView browser = null;
 	private String username;
 	private String client;
-	private Button buttPer = null;
+	private Button buttUser = null;
 	private Button buttEmail = null;
 	private Button buttIMAP = null;
+	private Handler handler = new Handler();
 	private static final String ASSET_EMAIL_ANDROID = "file:///android_asset/email_android.html";
 	private static final String ASSET_EMAIL_K9 = "file:///android_asset/email_k9.html";
 	private static final String ASSET_EMAIL_HTC = "file:///android_asset/email_htc.html";
@@ -33,7 +35,7 @@ public class EmailGuide extends Activity {
 
         browser = (WebView)findViewById(R.id.WebView);
         browser.getSettings().setJavaScriptEnabled(true);
-        buttPer = (Button)findViewById(R.id.button_personalize);
+        buttUser = (Button)findViewById(R.id.button_copy_user);
         buttEmail = (Button)findViewById(R.id.button_copy_email);
         buttIMAP = (Button)findViewById(R.id.button_copy_imap);
         receipt = getIntent();
@@ -52,9 +54,9 @@ public class EmailGuide extends Activity {
         	browser.loadUrl(ASSET_EMAIL_HTC);
         }
         
-        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_guide), Toast.LENGTH_SHORT)
+        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_per), Toast.LENGTH_LONG)
 		.show();
-
+        
         
         buttEmail.setOnClickListener(new View.OnClickListener() {
 			
@@ -68,13 +70,14 @@ public class EmailGuide extends Activity {
 			}
 		});
         
-        buttPer.setOnClickListener(new View.OnClickListener() {
+        buttUser.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-		        browser.loadUrl("javascript:changeText('" + username + "')");
-		        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_per), Toast.LENGTH_SHORT)
+				browser.loadUrl("javascript:changeText('" + username + "')");
+				((ClipboardManager)getSystemService(CLIPBOARD_SERVICE)).setText(username);
+		        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_user)+username, Toast.LENGTH_SHORT)
 				.show();
 			}
 		});
@@ -91,5 +94,5 @@ public class EmailGuide extends Activity {
 			}
 		});
         
-    }
+    }     
 }

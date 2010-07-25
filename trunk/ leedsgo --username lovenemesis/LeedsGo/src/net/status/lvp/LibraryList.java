@@ -1,7 +1,11 @@
 package net.status.lvp;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -17,6 +21,7 @@ public class LibraryList extends Activity {
 	private String Da = null;
 	private String Db = null;
 	private String sort = null;
+	private static final String BASE_URL = "http://lib.leeds.ac.uk/airpac/search?action=search&indexcount=1&indexsetstart=0&sourcebrowse=avssearchpage&directhit=recordbrowse&itemstart=1&indexstart=1&searchtype=X";
 	
     /** Called when the activity is first created. */
     @Override
@@ -43,6 +48,50 @@ public class LibraryList extends Activity {
 				Db + "\n" +
 				sort, Toast.LENGTH_LONG)
 		.show();
-        
+		
+		try{
+			new LibraryParser().execute(new URL(BASE_URL));
+		}
+        catch(MalformedURLException e){
+        	Toast.makeText(LibraryList.this,
+        			"Wrong URL was passed" +
+        			searchstring + "\n" +
+    				scope + "\n" +
+    				lang + "\n" +
+    				mattype + "\n" +
+    				branch + "\n" +
+    				Da + "\n" +
+    				Db + "\n" +
+    				sort,
+    				Toast.LENGTH_LONG)
+    		.show();
+        }
     }
+    
+    
+    
+    
+    private class LibraryParser extends AsyncTask<URL, Void, LibraryBook[]>{
+    	protected void  onPreExecute(){
+    		
+    		
+    	}
+    	
+    	protected LibraryBook[] doInBackground(URL... urls){
+    		
+    		return null;
+    	}
+    	
+    	protected void onProgressUpdate(Void... unused){
+    		
+    		
+    	}
+    	
+    	protected void  onPostExecute(LibraryBook[] books){
+    		
+    		
+    	}
+    }
+    
+    
 }
