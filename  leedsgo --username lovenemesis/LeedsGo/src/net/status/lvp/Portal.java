@@ -42,7 +42,7 @@ public class Portal extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(Portal.this, LibrarySearch.class));
+				startActivity(new Intent(Portal.this, LibraryPre.class));
 			}
 		});
         

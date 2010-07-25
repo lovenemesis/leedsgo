@@ -60,7 +60,7 @@ public class EmailPre extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				// Store username to local variable
-				username = editUser.getText().toString();
+				username = editUser.getText().toString().trim();
 			}
 		});
         

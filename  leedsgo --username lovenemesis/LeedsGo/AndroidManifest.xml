@@ -19,6 +19,8 @@
         <activity android:name="EmailGuide"></activity>
         <activity android:name="RssGuide"></activity>
 <activity android:name="MapGuide"></activity>
+<activity android:name="LibraryPre"></activity>
+<activity android:name="LibraryWeb"></activity>
 </application>
     <uses-sdk android:minSdkVersion="4" />
 

@@ -9,8 +9,8 @@
 		 android:id="@+id/TopBar"
 		 android:background="#1F8FFF"
 		 android:layout_width="fill_parent">
-		<TextView android:id="@+id/title_email"
-		 android:text="@string/title_email"
+		<TextView android:id="@+id/title_lib"
+		 android:text="@string/title_library"
 		 android:textColor="#EEEEEE"
 		 android:textSize="15sp"
 		 android:padding="2px"
@@ -26,7 +26,7 @@
 		 android:padding="2px"
 		 android:layout_width="wrap_content"/>
   </RelativeLayout>
-  <WebView android:id="@+id/WebView"
+  <WebView android:id="@+id/airpac"
   		 android:layout_below="@id/TopBar"
   		 android:layout_above="@+id/BottomBar"
 		 android:layout_height="fill_parent"
@@ -41,19 +41,19 @@
 		 android:layout_width="fill_parent">
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_copy_email" 
-		 android:text="@string/email"
+		 android:id="@+id/button_return_view" 
+		 android:text="@string/return_view"
 		 android:layout_alignParentLeft="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_copy_user" 
-		 android:text="@string/username"
+		 android:id="@+id/button_search_view" 
+		 android:text="@string/search"
 		 android:textStyle="bold"
 		 android:layout_centerInParent="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_copy_imap" 
-		 android:text="@string/imap"
+		 android:id="@+id/button_forward" 
+		 android:text="@string/forward"
 		 android:layout_alignParentRight="true"/>
 	</RelativeLayout>
 </RelativeLayout>
