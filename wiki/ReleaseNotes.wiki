@@ -3,6 +3,13 @@
 
 This file contains all the release notes.
 
+== 1.0 Beta 25/07/2010==
+
+Notes in 1.0 Beta:
+  * AirPAC in customised embedded browser is nominated to be has a temporal solution before the real native implementation.
+  * AirPAC HTTP POST actions for native query were reverse-engineered and settled.
+  * Probably need some help for regular expression to process plain text/html files.
+
 
 == 1.0 Alpha 20/07/2010==
 
