@@ -10,9 +10,13 @@ http://leedsgo.googlecode.com/files/MainPortal.png
 
 *Entrance of the application.*
 ----
-http://leedsgo.googlecode.com/files/LibrarySearch.png ---- 
+http://leedsgo.googlecode.com/files/LibrarySearch.png
 
-*Library Search with advanced search options.*
+*Library Search with advanced search options. CONSTRUCTING*
+----
+http://leedsgo.googlecode.com/files/LibraryWeb.png
+
+*Optimised AirPAC to Library catalogue*
 ----
 http://leedsgo.googlecode.com/files/EmailPre.png 
 
