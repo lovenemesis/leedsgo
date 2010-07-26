@@ -46,8 +46,8 @@
 		 android:layout_alignParentLeft="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_search_view" 
-		 android:text="@string/search"
+		 android:id="@+id/button_home" 
+		 android:text="@string/home"
 		 android:textStyle="bold"
 		 android:layout_centerInParent="true"/>
 		<Button android:layout_height="wrap_content"

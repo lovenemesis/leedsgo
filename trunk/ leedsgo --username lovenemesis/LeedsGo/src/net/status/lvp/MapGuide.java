@@ -1,8 +1,12 @@
 package net.status.lvp;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -24,13 +28,14 @@ public class MapGuide extends Activity {
 	private Button buttHowto = null;
 	private Button buttView = null;
     private Intent intent = null;
+    private File pdf = null;
     private static final String MAP_VIEWER = "market://details?id=com.google.android.apps.maps";
     private static final String PDF_VIEWER = "market://details?id=com.adobe.reader";
     private static final String FLASH_VIEWER = "market://details?id=com.adobe.flashplayer";
     private static final String GEO_UOL = "geo:53.807988,-1.55448?z=16";
     private static final String PDF_MAP = "http://www.leeds.ac.uk/downloads/014257_campus_map_A3_fold.pdf";
     private static final String FLASH_MAP = "http://www.leeds.ac.uk/site/custom_scripts/campus_map/";
-    
+    private static final String PDF_PATH = "/download/014257_campus_map_A3_fold.pdf";
 
 	
 	/** Called when the activity is first created. */
@@ -85,8 +90,29 @@ public class MapGuide extends Activity {
 				// Get the checked radio button id
 				if(rbMV.isChecked())
 					intent = new Intent(Intent.ACTION_VIEW, Uri.parse(GEO_UOL));
-				if(rbPV.isChecked())
-					intent = new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_MAP));
+				if(rbPV.isChecked()){
+					try{
+						if(Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())){
+							pdf = new File(Environment.getExternalStorageDirectory() + PDF_PATH);
+							if(pdf.exists() && pdf.isFile() && pdf.canRead()){
+								intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Environment.getExternalStorageDirectory() + PDF_PATH));
+								intent.setType("application/pdf");
+							}
+							else {
+								intent = new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_MAP));
+							}
+						}
+						else{
+							Toast.makeText(MapGuide.this, getString(R.string.toast_file_error), Toast.LENGTH_SHORT)
+							.show();
+							intent = null;
+						}
+					}
+					catch(SecurityException e){
+						Toast.makeText(MapGuide.this, getString(R.string.toast_file_error), Toast.LENGTH_SHORT)
+						.show();
+					}
+				}
 				if(rbFV.isChecked())
 					intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_MAP));
 			}

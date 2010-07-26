@@ -12,7 +12,7 @@ public class LibraryWeb extends Activity {
 	
 	private WebView airpac = null;
 	private Button buttReturn = null;
-	private Button buttSearch = null;
+	private Button buttHome = null;
 	private Button buttForw =null;
 	
 	private static final String AIRPAC = "http://lib.leeds.ac.uk/airpac/";
@@ -25,7 +25,7 @@ public class LibraryWeb extends Activity {
         
         airpac = (WebView)findViewById(R.id.airpac);
         buttReturn = (Button)findViewById(R.id.button_return_view);
-        buttSearch = (Button)findViewById(R.id.button_search_view);
+        buttHome = (Button)findViewById(R.id.button_home);
         buttForw = (Button)findViewById(R.id.button_forward);
         
         airpac.getSettings().setJavaScriptEnabled(true);
@@ -41,7 +41,7 @@ public class LibraryWeb extends Activity {
 			}
 		});
         
-        buttSearch.setOnClickListener(new View.OnClickListener() {
+        buttHome.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
