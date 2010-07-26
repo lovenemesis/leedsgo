@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.status.lvp"
-      android:versionCode="2" android:versionName="1.0 Beta">
+      android:versionName="1.0 Beta 2" android:versionCode="3">
       <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application android:icon="@drawable/icon" android:label="@string/app_name" >
         <activity android:label="@string/app_name" android:name="Portal">
@@ -11,16 +11,19 @@
             </intent-filter>
         </activity>
 
-    <activity android:name="LibrarySearch"></activity>
+    	<activity android:name="LibrarySearch"></activity>
         <activity android:name="LibraryList"></activity>
         <activity android:name="LibraryResult"></activity>
         <activity android:name="EmailPre"></activity>
         <activity android:name="EmailGuide"></activity>
         <activity android:name="RssGuide"></activity>
-<activity android:name="MapGuide"></activity>
-<activity android:name="LibraryPre"></activity>
-<activity android:name="LibraryWeb"></activity>
+		<activity android:name="MapGuide"></activity>
+		<activity android:name="LibraryPre"></activity>
+		<activity android:name="LibraryWeb"></activity>
 </application>
     <uses-sdk android:minSdkVersion="4" />
 
+
+
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 </manifest>

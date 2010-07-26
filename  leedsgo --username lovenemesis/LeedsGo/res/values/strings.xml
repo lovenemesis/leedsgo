@@ -114,9 +114,9 @@
 <string name="map_prompt">Install viewers</string>
 <string name="map_viewer">Google Maps</string>
 <string name="pdf_viewer">Adobe Reader (Android 2.1+)</string>
-<string name="flash_viewer">Adobe Flash Player (Android 2.2+)</string><string name="map_online">Online Map (Require Google Maps or other)</string>
-<string name="map_pdf">PDF Map (Require PDF reader)</string>
-<string name="map_flash">Interactive Map (Require Flash, UNTESTED)</string>
+<string name="flash_viewer">Adobe Flash Player (Android 2.2+)</string><string name="map_online">Online Map\n(Require Google Maps or other)</string>
+<string name="map_pdf">PDF Map\n(433K, Require PDF reader)</string>
+<string name="map_flash">Interactive Map\n(Require Flash, UNTESTED)</string>
 <string name="view_map">View Map</string>
 <string name="help_map_message">Install the necessary viewer before proceed to view the campus maps</string>
 <string name="toast_map">Please select a kind of map to view.</string>
@@ -139,4 +139,6 @@
 <string name="return_view">Return view</string>
 <string name="forward">Forward</string>
 <string name="toast_email_per">Click Username to copy and personalize the guide.</string>
+
+<string name="toast_file_error">ERROR: File unaccessible.</string>
 </resources>
