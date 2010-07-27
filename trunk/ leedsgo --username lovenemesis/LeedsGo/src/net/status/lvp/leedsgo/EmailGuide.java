@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 import android.content.Intent;
+import android.content.res.Configuration;
 
 
 public class EmailGuide extends Activity {
@@ -92,5 +93,10 @@ public class EmailGuide extends Activity {
 			}
 		});
         
-    }     
+    }
+    
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){        
+        super.onConfigurationChanged(newConfig);
+    }
 }

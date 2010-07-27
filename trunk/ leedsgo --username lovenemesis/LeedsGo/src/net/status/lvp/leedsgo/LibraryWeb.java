@@ -1,6 +1,7 @@
 package net.status.lvp.leedsgo;
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -60,6 +61,12 @@ public class LibraryWeb extends Activity {
 		});
         
     }
+    
+    @Override
+    public void onConfigurationChanged(Configuration newConfig){        
+        super.onConfigurationChanged(newConfig);
+    }
+
     
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
