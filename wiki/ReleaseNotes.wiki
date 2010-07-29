@@ -3,6 +3,14 @@
 
 This file contains all the release notes.
 
+== 1.0 Beta 3 28/07/2010 ==
+
+Notes in 1.0 Beta 3:
+  * Fixed rotation issue in WebView related components.
+  * No longer download PDF map if it is on SD card.
+  * Published on Android Market.
+
+
 == 1.0 Beta 25/07/2010==
 
 Notes in 1.0 Beta:
