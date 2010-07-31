@@ -404,7 +404,7 @@ public class LibrarySearch extends Activity {
 					.show();
 				}
 				else {
-					startActivity(new Intent(LibrarySearch.this, LibraryList.class)
+					startActivity(new Intent(LibrarySearch.this, LibraryWeb.class)
 						.putExtra("searchstring", searchstring)
 						.putExtra("scope", scope)
 						.putExtra("lang", lang)

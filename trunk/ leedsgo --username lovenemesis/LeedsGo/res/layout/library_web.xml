@@ -41,8 +41,8 @@
 		 android:layout_width="fill_parent">
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
-		 android:id="@+id/button_return_view" 
-		 android:text="@string/return_view"
+		 android:id="@+id/button_back" 
+		 android:text="@string/back"
 		 android:layout_alignParentLeft="true"/>
 		<Button android:layout_height="wrap_content"
 		 android:layout_width="wrap_content"
