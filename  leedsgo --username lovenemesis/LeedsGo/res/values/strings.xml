@@ -45,11 +45,11 @@
 <string name="prev">Prev</string>
 <string name="next">Next</string>
 <string name="home">Home</string>
-<string name="list">List</string>
-<string name="author">Author:</string>
-<string name="title">Title:</string>
-<string name="imprint">Imprint:</string>
-<string name="availability">Availability:</string>
+
+
+
+
+
 <string name="note">Note:</string>
 <string name="about_uol_message">The University of Leeds (informally Leeds University) is a British 'Redbrick' university located in the city of Leeds, West Yorkshire, England.\nThe University is a member of the Russell Group of research universities and the N8 Group for research collaboration.\nThe university is also a founding member of the Worldwide Universities Network, the Association of Commonwealth Universities, the European University Association, the White Rose University Consortium, the Santander Network and CDIO and is also affiliated to the Association of MBAs, EQUIS and Universities UK.\nIn 1904, a royal charter was granted to the University of Leeds by Edward VII.</string>
 <string name="close">Close</string>
@@ -94,7 +94,7 @@
 <item>Special Collections</item>
 </string-array>
 
-<string name="help_lib_message">Type in keywords and click Search.\nClick Clear to revert default values.</string>
+<string name="help_lib_message">Type in keywords and click Search.\nClick Clear to revert to default values.</string>
 <string name="guide">See Guide</string>
 <string name="username">Username</string>
 <string name="email_android">Android Email Client</string>
@@ -131,14 +131,17 @@
 <string name="map_select">Select map to view:</string>
 <string name="rss_select">Select RSS to subscribe:</string>
 <string name="toast_lib_search">Please enter keywords for searching.</string>
-<string name="lib_select">Select the view for Catalogue:</string>
-<string name="lib_native">Native Android View\n(Constructing)</string>
-<string name="lib_web">Legacy AirPAC View</string>
-<string name="view_lib">View catalogue</string>
-<string name="toast_lib_pre">Select a way to access catalogue.</string>
-<string name="return_view">Return view</string>
+
+
+
+
+
+
 <string name="forward">Forward</string>
 <string name="toast_email_per">Click Username to copy and personalize the guide.</string>
 
 <string name="toast_file_error">ERROR: File unaccessible.</string>
+<string name="back">Back</string>
+<string name="caution">CAUTION</string>
+<string name="caution_lib_message">This link points to a page which is unreadable and bandwidth-consuming on mobile.\nSo it was disabled.</string>
 </resources>
