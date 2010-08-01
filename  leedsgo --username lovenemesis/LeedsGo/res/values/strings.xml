@@ -144,4 +144,5 @@
 <string name="back">Back</string>
 <string name="caution">CAUTION</string>
 <string name="caution_lib_message">This link points to a page which is unreadable and bandwidth-consuming on mobile.\nSo it was disabled.</string>
+<string name="caution_map_message">The viewer for selected map is not installed.\nPlease install the viewer first.</string>
 </resources>
