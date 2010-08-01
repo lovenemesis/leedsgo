@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -146,7 +147,23 @@ public class MapGuide extends Activity {
 					.show();
 				}
 				else {
-					startActivity(intent);
+					try {
+						startActivity(intent);
+					}
+					catch(ActivityNotFoundException e){
+						new AlertDialog.Builder(MapGuide.this)
+						.setTitle(R.string.caution)
+						.setMessage(R.string.caution_map_message)
+						.setNeutralButton(R.string.close, new DialogInterface.OnClickListener() {
+							
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								// TODO Auto-generated method stub
+								
+							}
+						})
+						.show();
+					}
 				}
 			}
 		});
