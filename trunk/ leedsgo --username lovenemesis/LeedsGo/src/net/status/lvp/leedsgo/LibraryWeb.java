@@ -103,17 +103,21 @@ public class LibraryWeb extends Activity {
         return super.onKeyDown(keyCode, event);
     }
 	
+    //Private WebClient to control the URL loading 
     private class myWebClient extends WebViewClient {
     	@Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
     		if(url.equalsIgnoreCase(AIRPAC+"search/")){
+    			//Finish and Return to native search activity 
     			LibraryWeb.this.finish();
     		}
     		else{
-    			if(url.startsWith(AIRPAC)){    			
+    			if(url.startsWith(AIRPAC)){
+    				//Only load pages within AirPAC.
     				view.loadUrl(url);
     			}
     			else {
+    				//Or popup a dialogue to block access.
     				new AlertDialog.Builder(LibraryWeb.this)
     				.setTitle(R.string.caution)
     				.setMessage(R.string.caution_lib_message)

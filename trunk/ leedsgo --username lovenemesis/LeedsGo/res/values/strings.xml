@@ -42,19 +42,11 @@
 <item>Korean</item>
 </string-array>
 
-<string name="prev">Prev</string>
-<string name="next">Next</string>
 <string name="home">Home</string>
-
-
-
-
-
-<string name="note">Note:</string>
-<string name="about_uol_message">The University of Leeds (informally Leeds University) is a British 'Redbrick' university located in the city of Leeds, West Yorkshire, England.\nThe University is a member of the Russell Group of research universities and the N8 Group for research collaboration.\nThe university is also a founding member of the Worldwide Universities Network, the Association of Commonwealth Universities, the European University Association, the White Rose University Consortium, the Santander Network and CDIO and is also affiliated to the Association of MBAs, EQUIS and Universities UK.\nIn 1904, a royal charter was granted to the University of Leeds by Edward VII.</string>
+<string name="about_uol_message">The University of Leeds (informally Leeds University) is a British 'Redbrick' university located in the city of Leeds, West Yorkshire, England.\nThe University is a member of the Russell Group of research universities and the N8 Group for research collaboration.\nThe university is also a founding member of the Worldwide Universities Network, the Association of Commonwealth Universities, the European University Association, the White Rose University Consortium, the Santander Network and CDIO and is also affiliated to the Association of MBAs, EQUIS and Universities UK.\nIn 1904, a royal charter was granted to the University of Leeds by Edward VII.\n\nFrom corresponding entry on Wikipedia. </string>
 <string name="close">Close</string>
-<string name="about_iss_message">Portal Desktop version is maintained by Information System Service.\nTelephone: + 44 (0) 113 343 3333 </string>
-<string name="about_me_message">Unofficial client for University of Leeds Portal.\nCopyright (C) 2010  Tommy He\nSource: GPLv3\nContents: CC-NC-SAv3.\nhttp://code.google.com/p/leedsgo/</string>
+<string name="about_iss_message">Some functions require Internet access to online resources maintained by Information System Service and Library Service in University of Leeds.\n\nDECLARATION:THE GUIDES ARE PROVIDED AS REFERENCES ONLY. NONE OF THEM WERE PRODUCED BY ANY OFFICIAL DEPARTMENT RELATED TO UNIVERSITY OF LEEDS.</string>
+<string name="about_me_message">VERSION 1.0 BETA6\n\nUnofficial client for University of Leeds Portal.\n\nCopyright (C) 2010  Tommy He\n\nSource: GPLv3\nContents: CC-NC-SAv3.\n\nhttp://code.google.com/p/leedsgo/</string>
 
 <string-array name="only_in">
 <item>Special Collections</item>
@@ -100,7 +92,7 @@
 <string name="email_android">Android Email Client</string>
 <string name="email_k9">K9 Mail Client</string>
 <string name="email_htc">HTC Email Client</string>
-<string name="help_email_message">Type ISS username and choose the email client you use</string>
+<string name="help_email_message">Type ISS username and choose the email client you are using.</string>
 
 <string name="rss_prompt">Install RSS Reader</string>
 <string name="news_reader">OI News Reader</string>
