@@ -59,8 +59,14 @@ public class MapGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MAP_VIEWER)));
+				
+				try{
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MAP_VIEWER)));
+				}
+				catch(ActivityNotFoundException e){
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					.show();
+				}
 			}
 		});
         
@@ -68,8 +74,13 @@ public class MapGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_VIEWER)));
+				try{
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_VIEWER)));
+				}
+				catch(ActivityNotFoundException e){
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					.show();
+				}
 			}
 		});
         
@@ -77,8 +88,13 @@ public class MapGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_VIEWER)));
+				try{
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_VIEWER)));
+				}
+				catch(ActivityNotFoundException e){
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					.show();
+				}
 			}
 		});
         
@@ -121,7 +137,6 @@ public class MapGuide extends Activity {
         buttHowto.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				new AlertDialog.Builder(MapGuide.this)
 				.setTitle(R.string.howto)
 				.setMessage(R.string.help_map_message)
@@ -141,7 +156,6 @@ public class MapGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				if (intent == null) {
 					Toast.makeText(MapGuide.this, getString(R.string.toast_map), Toast.LENGTH_SHORT)
 					.show();

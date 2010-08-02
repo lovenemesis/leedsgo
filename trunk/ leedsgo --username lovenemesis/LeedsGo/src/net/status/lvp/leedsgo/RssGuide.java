@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -46,8 +47,13 @@ public class RssGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FEED_READER)));
+				try{
+					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FEED_READER)));
+				}
+				catch(ActivityNotFoundException e){
+					Toast.makeText(RssGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					.show();
+				}
 			}
 		});
         
@@ -67,7 +73,7 @@ public class RssGuide extends Activity {
         buttHowto.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				new AlertDialog.Builder(RssGuide.this)
 				.setTitle(R.string.howto)
 				.setMessage(R.string.help_rss_message)
@@ -87,7 +93,7 @@ public class RssGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				if (subs == null) {
 					Toast.makeText(RssGuide.this, getString(R.string.toast_rss), Toast.LENGTH_SHORT)
 					.show();

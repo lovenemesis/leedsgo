@@ -124,25 +124,18 @@
 
 <string name="imap">IMAP</string>
 <string name="email">Email</string>
-<string name="toast_email_guide">Click Personalize to see your personal guide. :-)</string>
 <string name="toast_email_user">Your personal username has been copied to clipboard:\n</string>
 <string name="toast_email_email">Your personal email address has been copied to clipboard:\n</string>
 <string name="toast_email_imap">Your personal IMAP address has been copied to clipboard:\n</string>
 <string name="map_select">Select map to view:</string>
 <string name="rss_select">Select RSS to subscribe:</string>
 <string name="toast_lib_search">Please enter keywords for searching.</string>
-
-
-
-
-
-
 <string name="forward">Forward</string>
-<string name="toast_email_per">Click Username to copy and personalize the guide.</string>
-
+<string name="toast_email_per">Click Username to copy username to clipboard and personalize the guide.</string>
 <string name="toast_file_error">ERROR: File unaccessible.</string>
 <string name="back">Back</string>
 <string name="caution">CAUTION</string>
 <string name="caution_lib_message">This link points to a page which is unreadable and bandwidth-consuming on mobile.\nSo it was disabled.</string>
 <string name="caution_map_message">The viewer for selected map is not installed.\nPlease install the viewer first.</string>
+<string name="toast_market">Your device is not certificated by Android Market.\nYou have to install these viewers by other means.</string>
 </resources>
