@@ -12,11 +12,11 @@ http://leedsgo.googlecode.com/files/MainPortal.png
 ----
 http://leedsgo.googlecode.com/files/LibrarySearch.png
 
-*Library Search with advanced search options.
+*Library Search with advanced search options. Integrated the best parts of native application and online resource together.*
 ----
 http://leedsgo.googlecode.com/files/LibraryWeb.png
 
-*Optimised AirPAC to display the item information catalogue*
+*Optimised AirPAC to display the item information*
 ----
 http://leedsgo.googlecode.com/files/LibraryCaution.png
 
