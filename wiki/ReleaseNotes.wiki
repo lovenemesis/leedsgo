@@ -3,12 +3,21 @@
 
 This file contains all the release notes.
 
+== 1.0 Beta 6 02/08/2010 ==
+
+Notes in 1.0 Beta 6:
+  * Logo changed as requested.
+  * Added declaration.
+  * Fix crash on AOSP devices.
+  * Fix year numerical in LibrarySearch
+  * Updated on Android Market 
+
 == 1.0 Beta 4 31/07/2010 ==
 
 Notes in 1.0 Beta 4:
   * Merged library web view with native advanced search
   * Pop up a caution when clicking non-airpac link in web view.
-  * Updates on Android Market
+  * Updated on Android Market
 
 == 1.0 Beta 3 28/07/2010 ==
 
