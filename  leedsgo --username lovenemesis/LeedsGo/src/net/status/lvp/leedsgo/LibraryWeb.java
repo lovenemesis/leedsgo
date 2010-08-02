@@ -63,7 +63,7 @@ public class LibraryWeb extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				airpac.goBack();
 			}
 		});
@@ -72,7 +72,7 @@ public class LibraryWeb extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				finish();
 			}
 		});
@@ -81,7 +81,7 @@ public class LibraryWeb extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				airpac.goForward();
 			}
 		});

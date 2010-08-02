@@ -61,7 +61,7 @@ public class EmailGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				//Copy email address.
 				String email = username +"@leeds.ac.uk";
 				((ClipboardManager)getSystemService(CLIPBOARD_SERVICE)).setText(email);
 		        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_email)+email, Toast.LENGTH_SHORT)
@@ -73,7 +73,7 @@ public class EmailGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				//Invoke JS method to change username and copy username.
 				browser.loadUrl("javascript:changeText('" + username + "')");
 				((ClipboardManager)getSystemService(CLIPBOARD_SERVICE)).setText(username);
 		        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_user)+username, Toast.LENGTH_SHORT)
@@ -85,7 +85,7 @@ public class EmailGuide extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				//Copy IMAP address.
 				String imap = username +".imap.leeds.ac.uk";
 				((ClipboardManager)getSystemService(CLIPBOARD_SERVICE)).setText(imap);
 		        Toast.makeText(EmailGuide.this, getString(R.string.toast_email_imap)+imap, Toast.LENGTH_SHORT)

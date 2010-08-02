@@ -82,7 +82,7 @@ public class EmailPre extends Activity {
         buttHowto.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				new AlertDialog.Builder(EmailPre.this)
 				.setTitle(R.string.howto)
 				.setMessage(R.string.help_email_message)
@@ -102,7 +102,7 @@ public class EmailPre extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				if (username == null || client == null) {
 					Toast.makeText(EmailPre.this, getString(R.string.toast_email_pre), Toast.LENGTH_SHORT)
 					.show();

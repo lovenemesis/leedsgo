@@ -379,7 +379,7 @@ public class LibrarySearch extends Activity {
         buttHowto.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				
 				new AlertDialog.Builder(LibrarySearch.this)
 				.setTitle(R.string.howto)
 				.setMessage(R.string.help_lib_message)
@@ -442,8 +442,7 @@ public class LibrarySearch extends Activity {
     }
     
     @Override
-    public void onPause(){
-    	// TODO 
+    public void onPause(){ 
     	super.onPause();
     		
     }

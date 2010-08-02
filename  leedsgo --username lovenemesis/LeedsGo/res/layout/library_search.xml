@@ -134,7 +134,8 @@
 			 	android:layout_height="wrap_content"
 			 	android:layout_width="fill_parent"
 			 	android:focusable="true"
-			 	android:numeric="integer"
+			 	android:numeric="decimal"
+			 	android:maxLength="4"
 			 	android:editable="true"
 			 	android:singleLine="true"/>
 			<TextView android:text="@string/year_before"
@@ -149,7 +150,8 @@
 			 	android:layout_height="wrap_content"
 			 	android:layout_width="fill_parent"
 			 	android:focusable="true"
-			 	android:numeric="integer"
+			 	android:numeric="decimal"
+			 	android:maxLength="4"
 			 	android:editable="true"
 			 	android:singleLine="true"/>
 			<View android:layout_height="2px"
