@@ -12,11 +12,15 @@ http://leedsgo.googlecode.com/files/MainPortal.png
 ----
 http://leedsgo.googlecode.com/files/LibrarySearch.png
 
-*Library Search with advanced search options. CONSTRUCTING*
+*Library Search with advanced search options.
 ----
 http://leedsgo.googlecode.com/files/LibraryWeb.png
 
-*Optimised AirPAC to Library catalogue*
+*Optimised AirPAC to display the item information catalogue*
+----
+http://leedsgo.googlecode.com/files/LibraryCaution.png
+
+*Restrict the navigation within mobile friendly AirPAC. Release the pain for paying data package for mobile unreadable pages.
 ----
 http://leedsgo.googlecode.com/files/EmailPre.png 
 
