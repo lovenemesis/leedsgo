@@ -3,9 +3,13 @@
 
 This file contains all the release notes.
 
+== 1.0 Beta 7 03/08/2010 ==
+
+  * Quick fix of year decimal problem introduced yesterday.
+  * Text polished.
+
 == 1.0 Beta 6 02/08/2010 ==
 
-Notes in 1.0 Beta 6:
   * Logo changed as requested.
   * Added declaration.
   * Fix crash on AOSP devices.
@@ -14,14 +18,12 @@ Notes in 1.0 Beta 6:
 
 == 1.0 Beta 4 31/07/2010 ==
 
-Notes in 1.0 Beta 4:
   * Merged library web view with native advanced search
   * Pop up a caution when clicking non-airpac link in web view.
   * Updated on Android Market
 
 == 1.0 Beta 3 28/07/2010 ==
 
-Notes in 1.0 Beta 3:
   * Fixed rotation issue in WebView related components.
   * No longer download PDF map if it is on SD card.
   * Published on Android Market.
@@ -29,7 +31,6 @@ Notes in 1.0 Beta 3:
 
 == 1.0 Beta 25/07/2010==
 
-Notes in 1.0 Beta:
   * AirPAC in customised embedded browser is nominated to be has a temporal solution before the real native implementation.
   * AirPAC HTTP POST actions for native query were reverse-engineered and settled.
   * Probably need some help for regular expression to process plain text/html files.
@@ -37,7 +38,6 @@ Notes in 1.0 Beta:
 
 == 1.0 Alpha 20/07/2010==
 
-Notes in 1.0 Alpha:
   * All most everything works, *except Library* (No response from library system administrators).
   * No optimized.
   * Need to tick "Unknown sources" in Application Setting to install.
