@@ -36,7 +36,7 @@ http://leedsgo.googlecode.com/files/RSSGuide.png
 ----
 http://leedsgo.googlecode.com/files/MapGuide.png 
 
-Three kinds of map for different needs and devices.
+*Three kinds of map for different needs and devices.*
 ----
 
 _Created on VGA screen. Tested on QVGA AND WVGA devices._
