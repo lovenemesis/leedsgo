@@ -1,0 +1,13 @@
+#labels Featured
+= Known Issues =
+
+This page lists the problems known to developers.
+
+Most of them can be fixed in no time. Fixed version is not pushed to market immediately only because we both dislike the daily updates notifications.
+
+However, some problems may root in the area which beyond the capability and probably will not be fixed in near future. Apologize about these.
+
+
+== 1.0 Beta 6 ==
+
+  * Year fields in LibrarySearch accept decimals.
