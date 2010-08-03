@@ -107,7 +107,7 @@ public class LibraryWeb extends Activity {
     private class myWebClient extends WebViewClient {
     	@Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-    		if(url.equalsIgnoreCase(AIRPAC+"search/")){
+    		if(url.equalsIgnoreCase(AIRPAC+"search/") || url.equalsIgnoreCase(AIRPAC+"search?action=LoadAVSSearchPageAction")){
     			//Finish and Return to native search activity 
     			LibraryWeb.this.finish();
     		}
