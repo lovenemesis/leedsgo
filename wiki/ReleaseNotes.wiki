@@ -3,10 +3,18 @@
 
 This file contains all the release notes.
 
+== 1.0 RC1 07/08/2010 ==
+  * Fix Up link in LibrarySearch
+  * Delete deprecated LibraryBook
+  * Add vibration feedback when clicking in Portal
+  * Check the system version when in MapGuide
+  * Updated on Android Market 
+
 == 1.0 Beta 7 03/08/2010 ==
 
   * Quick fix of year decimal problem introduced yesterday.
   * Text polished.
+  * Updated on Android Market 
 
 == 1.0 Beta 6 02/08/2010 ==
 
