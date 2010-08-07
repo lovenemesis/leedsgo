@@ -4,6 +4,7 @@ import java.io.File;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -61,10 +62,16 @@ public class MapGuide extends Activity {
 			public void onClick(View v) {
 				
 				try{
-					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MAP_VIEWER)));
+					if(Build.VERSION.SDK_INT >= 4){
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(MAP_VIEWER)));
+					}
+					else{
+						Toast.makeText(MapGuide.this, getString(R.string.toast_version), Toast.LENGTH_LONG)
+						.show();
+					}
 				}
 				catch(ActivityNotFoundException e){
-					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_LONG)
 					.show();
 				}
 			}
@@ -75,10 +82,16 @@ public class MapGuide extends Activity {
 			@Override
 			public void onClick(View v) {
 				try{
-					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_VIEWER)));
+					if(Build.VERSION.SDK_INT >= 7){
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PDF_VIEWER)));
+					}
+					else{
+						Toast.makeText(MapGuide.this, getString(R.string.toast_version), Toast.LENGTH_LONG)
+						.show();
+					}
 				}
 				catch(ActivityNotFoundException e){
-					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_LONG)
 					.show();
 				}
 			}
@@ -89,10 +102,16 @@ public class MapGuide extends Activity {
 			@Override
 			public void onClick(View v) {
 				try{
-					startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_VIEWER)));
+					if(Build.VERSION.SDK_INT >= 8){
+						startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_VIEWER)));
+					}
+					else{
+						Toast.makeText(MapGuide.this, getString(R.string.toast_version), Toast.LENGTH_LONG)
+						.show();
+					}
 				}
 				catch(ActivityNotFoundException e){
-					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_SHORT)
+					Toast.makeText(MapGuide.this, getString(R.string.toast_market), Toast.LENGTH_LONG)
 					.show();
 				}
 			}
