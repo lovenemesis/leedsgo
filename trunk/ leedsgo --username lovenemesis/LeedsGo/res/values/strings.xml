@@ -13,7 +13,7 @@
 <string name="about_iss">ISS@Leeds</string>
 <string name="search">Search</string>
 <string name="clear">Clear</string>
-<string name="howto">HOWTO</string>
+<string name="howto">Help</string>
 <string name="search_for">Search For:</string>
 <string name="language">Language:</string>
 <string name="material_type">Material Type:</string>
@@ -110,7 +110,7 @@
 <string name="map_pdf">PDF Map\n(433K, Require PDF reader)</string>
 <string name="map_flash">Interactive Map\n(Require Flash, UNTESTED)</string>
 <string name="view_map">View Map</string>
-<string name="help_map_message">Install the necessary viewer before proceed to view the campus maps</string>
+<string name="help_map_message">Install the necessary viewer before proceed to view the campus maps.\n\nOnline Map requires Google Maps.\n\nPDF Map requires a PDF viewer such as Adobe Reader.\n\nInteractive Map requires Flash Player.</string>
 <string name="toast_map">Please select a kind of map to view.</string>
 
 
@@ -130,4 +130,5 @@
 <string name="caution_lib_message">This link points to a page which is unreadable and bandwidth-consuming on mobile.\nSo it was disabled.</string>
 <string name="caution_map_message">The viewer for selected map is not installed.\nPlease install the viewer first.</string>
 <string name="toast_market">Your device is not certificated by Android Market.\nYou have to install these viewers by other means.</string>
+<string name="toast_version">This viewer needs a higher Android system version to run.</string>
 </resources>

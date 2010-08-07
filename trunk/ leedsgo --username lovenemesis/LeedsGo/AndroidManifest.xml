@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.status.lvp.leedsgo"
-      android:versionName="1.0 Beta 7" android:versionCode="8">
+      android:versionCode="9" android:versionName="1.0 RC 1">
       <uses-permission android:name="android.permission.INTERNET"></uses-permission>
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <application android:label="@string/app_name" android:icon="@drawable/leedsgo">
@@ -26,4 +26,5 @@
 
 
 
+<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
 </manifest>

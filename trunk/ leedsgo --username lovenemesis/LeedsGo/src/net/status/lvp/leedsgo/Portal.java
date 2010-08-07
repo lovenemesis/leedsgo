@@ -2,6 +2,7 @@ package net.status.lvp.leedsgo;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.widget.Button;
 import android.widget.TextView;
 import android.app.AlertDialog;
@@ -18,6 +19,7 @@ public class Portal extends Activity {
 	private Button buttAU = null;
 	private Button buttAI = null;
 	private Button buttAM = null; 
+	private Vibrator vibrator = null;
 	
 	
     /** Called when the activity is first created. */
@@ -35,13 +37,14 @@ public class Portal extends Activity {
         buttAI = (Button)findViewById(R.id.button_about_iss);
         buttAM = (Button)findViewById(R.id.button_about_me);
         
+        vibrator = (Vibrator)getSystemService(VIBRATOR_SERVICE);
         
         //Setup listeners for click events.
         rowL.setOnClickListener(new View.OnClickListener() {
 			//Library List
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				vibrator.vibrate(50);
 				startActivity(new Intent(Portal.this, LibrarySearch.class));
 			}
 		});
@@ -50,25 +53,25 @@ public class Portal extends Activity {
 			//Email List
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				vibrator.vibrate(50);
 				startActivity(new Intent(Portal.this, EmailPre.class));
 			}
 		});
         
         rowR.setOnClickListener(new View.OnClickListener() {
-			//Email List
+			//RSS List
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				vibrator.vibrate(50);
 				startActivity(new Intent(Portal.this, RssGuide.class));
 			}
 		});
         
         rowM.setOnClickListener(new View.OnClickListener() {
-			//Email List
+			//Map List
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
+				vibrator.vibrate(50);
 				startActivity(new Intent(Portal.this, MapGuide.class));
 			}
 		});
