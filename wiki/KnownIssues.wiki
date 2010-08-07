@@ -8,6 +8,6 @@ Most of them can be fixed in no time. Fixed version is not pushed to market imme
 However, some problems may root in the area which beyond the capability and probably will not be fixed in near future. Apologize about these.
 
 
-== 1.0 Beta 6 ==
+== 1.0 RC1 ==
 
-  * Year fields in LibrarySearch accept decimals.
+  * Unable to handle non-English search strings in LibrarySearch
