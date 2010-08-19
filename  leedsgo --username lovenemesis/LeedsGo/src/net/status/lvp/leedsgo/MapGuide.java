@@ -149,7 +149,14 @@ public class MapGuide extends Activity {
 					}
 				}
 				if(rbFV.isChecked())
-					intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_MAP));
+					if(Build.VERSION.SDK_INT >= 8){
+						intent = new Intent(Intent.ACTION_VIEW, Uri.parse(FLASH_MAP));
+					}
+					else{
+						intent = null;
+						Toast.makeText(MapGuide.this, getString(R.string.toast_version), Toast.LENGTH_SHORT)
+						.show();
+					}
 			}
 		});
         

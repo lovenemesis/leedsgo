@@ -41,7 +41,7 @@ public class EmailPre extends Activity {
         buttHowto = (Button)findViewById(R.id.button_howto_email);
         buttGuide = (Button)findViewById(R.id.button_guide);
         
-       
+        
         editUser.addTextChangedListener(new TextWatcher() {
 			
 			@Override
@@ -103,7 +103,7 @@ public class EmailPre extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				if (username == null || client == null) {
+				if (username == null || username.length() == 0 || client == null) {
 					Toast.makeText(EmailPre.this, getString(R.string.toast_email_pre), Toast.LENGTH_SHORT)
 					.show();
 				}
