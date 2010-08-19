@@ -3,6 +3,11 @@
 
 This file contains all the release notes.
 
+== 1.0 RC2 19/08/2010 ==
+  * Add a dialogue in EmailGuide
+  * Several minor fixes on text from usability test.
+  * Updated on Android Market
+
 == 1.0 RC1 07/08/2010 ==
   * Fix Up link in LibrarySearch
   * Delete deprecated LibraryBook
