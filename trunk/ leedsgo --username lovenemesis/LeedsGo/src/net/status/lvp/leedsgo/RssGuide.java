@@ -100,7 +100,7 @@ public class RssGuide extends Activity {
 				}
 				else {
 					((ClipboardManager)getSystemService(CLIPBOARD_SERVICE)).setText(subs);
-					Toast.makeText(RssGuide.this, getString(R.string.toast_add), Toast.LENGTH_SHORT)
+					Toast.makeText(RssGuide.this, getString(R.string.toast_add), Toast.LENGTH_LONG)
 					.show();
 				}
 			}
